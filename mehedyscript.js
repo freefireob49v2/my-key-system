@@ -115,14 +115,14 @@ btn.onclick=function(){
     runFullBypass();
   }else if(h.includes('aincradmods.com')){
     ov.remove();
-    fetch('https://aincradmods.com/getkey.data',{method:'POST',credentials:'include',headers:{'content-type':'application/x-www-form-urlencoded;charset=UTF-8','accept':'*/*','origin':'https://aincradmods.com','referer':'https://aincradmods.com/getkey','x-requested-with':'mark.via.gp'}})
+    fetch('https://aincradmods.com/getkey?token=fdc2793c94db484c84bdd0b295a7afad.data',{method:'POST',credentials:'include',headers:{'content-type':'application/x-www-form-urlencoded;charset=UTF-8','accept':'*/*','origin':'https://aincradmods.com','referer':'https://aincradmods.com/getkey?token=fdc2793c94db484c84bdd0b295a7afad','x-requested-with':'mark.via.gp'}})
     .then(function(){window.location.href='https://alpharede.com/aincrad2';})
     .catch(function(){window.location.href='https://alpharede.com/aincrad2';});
   }else if(h.includes('alpharede.com')){
     ov.remove();
     window.location.href='https://alpharede.com/aincrad2';
   }else{
-    err.textContent='\u26a0 Open aincradmods.com/getkey first!';
+    err.textContent='\u26a0 Open aincradmods.com/getkey?token=fdc2793c94db484c84bdd0b295a7afad first!';
   }
 };
 inp.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
