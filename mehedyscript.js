@@ -1,130 +1,233 @@
-// Join Telegram Channels For more Useful Code
-// https://t.me/mehedy4644
+(function () {
+  "use strict";
 
-(function(){
-if(document.getElementById('_akg_overlay'))return;
-var h=location.host;
-var style=document.createElement('style');
-style.textContent='@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600&display=swap");#_akg_overlay{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:2147483647;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);}#_akg_box{background:linear-gradient(135deg,#0d0d1a,#111128);border:1px solid #6c47ff44;border-radius:20px;padding:28px 24px 20px;width:320px;max-width:94vw;box-shadow:0 0 60px #6c47ff22,0 0 0 1px #6c47ff22;text-align:center;font-family:"Rajdhani",sans-serif;}#_akg_title{font-family:"Orbitron",sans-serif;font-size:13px;font-weight:900;letter-spacing:3px;color:#6c47ff;text-transform:uppercase;margin-bottom:2px;}#_akg_sub{font-size:12px;color:#555;letter-spacing:1px;margin-bottom:20px;}#_akg_inp_wrap{position:relative;margin-bottom:14px;}#_akg_inp{width:100%;background:#0a0a18;border:1.5px solid #6c47ff55;border-radius:10px;padding:12px 16px;color:#fff;font-size:16px;font-family:"Orbitron",sans-serif;letter-spacing:4px;text-align:center;outline:none;box-sizing:border-box;transition:border .3s;}#_akg_inp:focus{border-color:#6c47ff;}#_akg_inp::placeholder{color:#333;letter-spacing:2px;font-size:13px;}#_akg_btn{width:100%;background:linear-gradient(135deg,#6c47ff,#a855f7);border:none;border-radius:10px;padding:13px;color:#fff;font-family:"Orbitron",sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;cursor:pointer;transition:opacity .2s;margin-bottom:16px;}#_akg_btn:hover{opacity:.85;}#_akg_btn:disabled{opacity:.4;cursor:not-allowed;}#_akg_err{color:#f87171;font-size:12px;margin-bottom:10px;min-height:16px;letter-spacing:1px;}#_akg_circle_wrap{display:none;flex-direction:column;align-items:center;margin-bottom:16px;}#_akg_status{font-size:12px;color:#888;letter-spacing:1px;margin-top:12px;}#_akg_tg{display:flex;align-items:center;justify-content:center;gap:6px;color:#555;font-size:11px;text-decoration:none;letter-spacing:1px;transition:color .2s;margin-top:4px;}#_akg_tg:hover{color:#6c47ff;}#_akg_close{position:absolute;top:14px;right:16px;color:#333;font-size:18px;cursor:pointer;line-height:1;}#_akg_close:hover{color:#888;}';
-document.head.appendChild(style);
-var ov=document.createElement('div');
-ov.id='_akg_overlay';
-ov.innerHTML='<div id="_akg_box" style="position:relative;"><span id="_akg_close">\u2715<\/span><div id="_akg_title">\u2694 Aincrad Key Generator<\/div><div id="_akg_sub">by t.me\/mehedy4644<\/div><div id="_akg_inp_wrap"><input id="_akg_inp" type="password" placeholder="ENTER ACCESS KEY" maxlength="20"\/><\/div><div id="_akg_err"><\/div><button id="_akg_btn">UNLOCK & GENERATE<\/button><div id="_akg_circle_wrap"><svg width="140" height="140" viewBox="0 0 140 140"><circle cx="70" cy="70" r="60" fill="#0d0d1a" stroke="#1a1a3a" stroke-width="8"\/><circle id="_akg_arc" cx="70" cy="70" r="60" fill="none" stroke="#6c47ff" stroke-width="8" stroke-dasharray="377" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 70 70)"\/><text id="_akg_num" x="70" y="78" text-anchor="middle" fill="#fff" font-size="42" font-weight="bold" font-family="Orbitron,sans-serif">30<\/text><\/svg><div id="_akg_status">\u23f3 Waiting...<\/div><\/div><a id="_akg_tg" href="https:\/\/t.me\/mehedy4644" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="#6c47ff"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.26l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.3z"\/><\/svg>t.me\/mehedy4644<\/a><\/div>';
-document.body.appendChild(ov);
-var inp=document.getElementById('_akg_inp');
-var btn=document.getElementById('_akg_btn');
-var err=document.getElementById('_akg_err');
-var circleWrap=document.getElementById('_akg_circle_wrap');
-var arc=document.getElementById('_akg_arc');
-var numEl=document.getElementById('_akg_num');
-var statusEl=document.getElementById('_akg_status');
-document.getElementById('_akg_close').onclick=function(){ov.remove();};
-ov.onclick=function(e){if(e.target===ov)ov.remove();};
-
-function showCircle(status){
-  circleWrap.style.display='flex';
-  btn.style.display='none';
-  inp.style.display='none';
-  document.getElementById('_akg_inp_wrap').style.display='none';
-  err.style.display='none';
-  statusEl.textContent=status||'\u23f3 Processing...';
-}
-
-function startCountdown(onDone){
-  showCircle('\u23f3 Please wait...');
-  var s=60;var total=377;
-  numEl.textContent=s;
-  arc.setAttribute('stroke','#6c47ff');
-  arc.setAttribute('stroke-dashoffset','0');
-  var iv=setInterval(function(){
-    s--;
-    numEl.textContent=s;
-    arc.setAttribute('stroke-dashoffset',(total/60)*(60-s));
-    if(s<=0){
-      clearInterval(iv);
-      numEl.textContent='\u26a1';
-      arc.setAttribute('stroke','#4ade80');
-      statusEl.textContent='\ud83d\ude80 Bypassing...';
-      onDone();
-    }
-  },1000);
-}
-
-// Join Telegram Channels For more Useful Code
-// https://t.me/mehedy4644
-
-function bypassSite(domain,cb){
-  var proto=domain==='rodaemotor.com'?'http':'http';
-  fetch(proto+'://'+domain+'/api/session-info',{credentials:'include',headers:{'Accept':'*/*'}})
-  .then(function(r){return r.json();})
-  .then(function(d){
-    if(!d.sessionToken){statusEl.textContent='\u274c No session found!';return;}
-    statusEl.textContent='\ud83d\udd11 Fetching key...';
-    var progress=d.totalStage+1;
-    var inp2=encodeURIComponent(JSON.stringify({"0":{"json":{"token":d.sessionToken,"progress":progress,"stageId":d.stageId}}}));
-    fetch(proto+'://'+domain+'/api/trpc/linkSession.nextStage?batch=1&input='+inp2,{
-      credentials:'include',
-      headers:{'trpc-accept':'application/jsonl','x-trpc-source':'nextjs-react','Accept':'*/*'}
-    }).then(function(r){return r.text();})
-    .then(function(t){
-      var dest=null,url=null;
-      t.trim().split('\n').forEach(function(l){
-        try{
-          var j=JSON.parse(l);
-          if(j&&j.json&&Array.isArray(j.json)&&j.json[2]){
-            var dd=j.json[2][0][0];
-            if(dd){if(dd.destinationLink)dest=dd.destinationLink;if(dd.url)url=dd.url;}
-          }
-        }catch(e){}
-      });
-      cb(dest,url);
-    });
-  })
-  .catch(function(e){statusEl.textContent='\u274c Error: '+e.message;});
-}
-
-function runFullBypass(){
-  startCountdown(function(){
-    if(h.includes('tarviral.com')){
-      bypassSite('tarviral.com',function(dest){
-        if(dest){
-          statusEl.textContent='\u2705 Done! Redirecting to key...';
-          setTimeout(function(){ov.remove();window.location.href=dest;},800);
-        }else{statusEl.textContent='\u274c Bypass failed! Try again.';}
-      });
-    }else if(h.includes('rodaemotor.com')){
-      bypassSite('rodaemotor.com',function(dest,url){
-        var next=dest||url;
-        if(next){
-          statusEl.textContent='\u2705 Jumping to next stage...';
-          setTimeout(function(){ov.remove();window.location.href=next;},800);
-        }else{statusEl.textContent='\u274c Failed! Try again.';}
-      });
-    }
-  });
-}
-
-// Join Telegram Channels For more Useful Code
-// https://t.me/mehedy4644
-
-btn.onclick=function(){
-  var val=inp.value.trim().toUpperCase();
-  if(val!=='MEHEDY'){err.textContent='\u274c Wrong key! Access denied.';inp.value='';return;}
-  err.textContent='';
-  if(h.includes('tarviral.com')||h.includes('rodaemotor.com')){
-    runFullBypass();
-  }else if(h.includes('aincradmods.com')){
-    ov.remove();
-    fetch('https://aincradmods.com/getkey?token=fdc2793c94db484c84bdd0b295a7afad.data',{method:'POST',credentials:'include',headers:{'content-type':'application/x-www-form-urlencoded;charset=UTF-8','accept':'*/*','origin':'https://aincradmods.com','referer':'https://aincradmods.com/getkey?token=fdc2793c94db484c84bdd0b295a7afad','x-requested-with':'mark.via.gp'}})
-    .then(function(){window.location.href='https://alpharede.com/aincrad2';})
-    .catch(function(){window.location.href='https://alpharede.com/aincrad2';});
-  }else if(h.includes('alpharede.com')){
-    ov.remove();
-    window.location.href='https://alpharede.com/aincrad2';
-  }else{
-    err.textContent='\u26a0 Open aincradmods.com/getkey?token=fdc2793c94db484c84bdd0b295a7afad first!';
+  if (typeof window.MEHEDY_BOOKMARK_LOAD === "undefined") {
+    console.log("%cAccess Denied - Bookmark Required", "color:#ff0000;font-size:15px;font-weight:bold");
+    return;
   }
-};
-inp.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
-inp.focus();
+  const _0x5e548e = {
+    k: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key.txt",
+    r: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/mehedy.txt",
+    t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button.txt",
+    s: "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#02040a;color:#fff;padding:25px;border-radius:12px;z-index:2147483647;font-family:sans-serif;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.8);border:2px solid #00ffcc;width:280px;box-sizing:border-box;"
+  };
+
+
+  (async function () {
+
+
+
+
+  
+    // REMOVE EXISTING AUTH BOX IF PRESENT
+    const _0x40e08f = document.getElementById("Ꮇᴇͥʜͣᴇͫᴅƴ-auth-box");
+    if (_0x40e08f) {
+      _0x40e08f.remove();
+    }
+
+    // CREATE AUTH BOX
+    const _0xd9eed1 = document.createElement("div");
+    _0xd9eed1.id = "Ꮇᴇͥʜͣᴇͫᴅƴ-auth-box";
+    _0xd9eed1.style.cssText = _0x5e548e.s;
+    _0xd9eed1.innerHTML = `
+      <h3 style="margin:0 0 10px 0;color:#00ffcc;font-size:18px;letter-spacing:1px;font-weight:bold;">Ꮇᴇͥʜͣᴇͫᴅƴ</h3>
+      <p style="margin:0 0 15px 0;color:#64748b;font-size:11px;">ENTER LICENSE KEY</p>
+      <input type="text" id="Ꮇᴇͥʜͣᴇͫᴅƴ-key-input" placeholder="ENTER KEY HERE"
+        style="width:100%;padding:10px;margin-bottom:15px;border:1px solid #00ffcc;border-radius:6px;background:#070b19;color:#fff;text-align:center;box-sizing:border-box;font-size:13px;outline:none;">
+      <button id="Ꮇᴇͥʜͣᴇͫᴅƴ-login-btn"
+        style="width:100%;background:#00ffcc;color:#000;border:none;padding:12px;border-radius:6px;font-weight:bold;cursor:pointer;font-size:13px;margin-bottom:10px;">VERIFY</button>
+      <button id="Ꮇᴇͥʜͣᴇͫᴅƴ-telegram-btn"
+        style="width:100%;background:#229ED9;color:#fff;border:none;padding:12px;border-radius:6px;font-weight:bold;cursor:pointer;font-size:13px;">TELEGRAM Ꮇᴇͥʜͣᴇͫᴅƴ</button>
+      <div id="Ꮇᴇͥʜͣᴇͫᴅƴ-status" style="margin-top:12px;font-size:12px;font-weight:bold;color:#64748b;">MADE WITH Ꮇᴇͥʜͣᴇͫᴅƴ</div>
+    `;
+    document.body.appendChild(_0xd9eed1);
+
+
+
+
+
+  
+    // RESPONSIVE ADJUSTMENT
+    setTimeout(() => {
+      _0xd9eed1.style.zIndex = "2147483647";
+      if (window.innerWidth < 600) {
+        _0xd9eed1.style.width = "90%";
+        _0xd9eed1.style.maxWidth = "280px";
+      }
+    }, 10);
+
+    const _0x115557 = document.getElementById("Ꮇᴇͥʜͣᴇͫᴅƴ-login-btn");
+    const _0xa73a22 = document.getElementById("Ꮇᴇͥʜͣᴇͫᴅƴ-telegram-btn");
+    const _0x4e244b = document.getElementById("Ꮇᴇͥʜͣᴇͫᴅƴ-key-input");
+    const _0x55c81e = document.getElementById("Ꮇᴇͥʜͣᴇͫᴅƴ-status");
+
+    // TELEGRAM BUTTON
+    _0xa73a22.addEventListener("click", async () => {
+      try {
+        const _0x3c4ae2 = await fetch(_0x5e548e.t + "?t=" + Date.now());
+        const _0x5ca472 = (await _0x3c4ae2.text()).trim();
+        if (_0x5ca472.startsWith("http")) {
+          window.open(_0x5ca472, "_blank");
+        }
+      } catch (_0x4daefe) {}
+    });
+    
+
+
+
+
+
+    // LOGIN BUTTON
+    _0x115557.addEventListener("click", async () => {
+      const _0x485046 = _0x4e244b.value.trim();
+
+      if (!_0x485046) {
+        _0x55c81e.innerHTML = "<span style='color:#ff4444;'>PLEASE INPUT KEY!</span>";
+        return;
+      }
+
+      _0x55c81e.innerHTML = "<span style='color:#00ffcc;'>CONNECTING SERVER...</span>";
+      _0x115557.disabled = _0xa73a22.disabled = true;
+
+      try {
+
+
+
+ 
+  
+        // FETCH AND VALIDATE KEY
+        const _0x4a3e2c = await fetch(_0x5e548e.k + "?t=" + Date.now());
+        const _0x85f258 = await _0x4a3e2c.text();
+        const _0x1b9391 = _0x85f258.split("\n").map(_0x217070 => _0x217070.trim()).filter(_0x4297b4 => _0x4297b4 !== "");
+
+        if (_0x1b9391.includes(_0x485046)) {
+          _0x55c81e.innerHTML = "<span style='color:#00ffcc;'>KEY VALIDATED! ✓</span>";
+
+          setTimeout(async () => {
+            _0xd9eed1.remove();
+
+
+
+
+  
+            // LOADING OVERLAY
+            const _0x4761a5 = document.createElement("div");
+            _0x4761a5.style.cssText = `
+              position:fixed; top:0; left:0; width:100%; height:100%;
+              background:rgba(2,4,10,0.85); z-index:2147483647;
+              display:flex; align-items:center; justify-content:center;
+              font-family:sans-serif;
+            `;
+            _0x4761a5.innerHTML = `
+              <div style="text-align:center; background:#02040a; padding:30px; border-radius:12px; border:2px solid #00ffcc; box-shadow:0 10px 30px rgba(0,0,0,0.8); width:280px;">
+                <div style="width:50px; height:50px; border:5px solid #1a2338; border-top:5px solid #00ffcc; border-radius:50%; margin:0 auto 20px auto; animation:Ꮇᴇͥʜͣᴇͫᴅƴ-spin 1s linear infinite;"></div>
+                <p id="Ꮇᴇͥʜͣᴇͫᴅƴ-check-text" style="color:#00ffcc; font-size:16px; font-weight:bold; margin:0; letter-spacing:1px;">CHECKING UPDATE...</p>
+              </div>
+              <style>
+                @keyframes Ꮇᴇͥʜͣᴇͫᴅƴ-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+              </style>
+            `;
+            document.body.appendChild(_0x4761a5);
+
+
+
+
+  
+            // CHECK FOR UPDATE
+            let _0x566f72 = false;
+            try {
+              const _0x33201b = await fetch("https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/");
+              const _0x5a22f2 = await _0x33201b.text();
+              if (_0x5a22f2.includes("GitHub Updated")) {
+                _0x566f72 = true;
+              }
+            } catch (_0x3e3f08) {}
+
+            await new Promise(_0x49f3d4 => setTimeout(_0x49f3d4, 0));
+
+            const _0x2b7697 = document.getElementById("Ꮇᴇͥʜͣᴇͫᴅƴ-check-text");
+            if (_0x566f72) {
+              _0x2b7697.innerHTML = "<span style='color:#00ffcc;'>Link Updated Successfully! ✓</span>";
+            } else {
+              _0x2b7697.innerHTML = "<span style='color:#ff4444;'>No Update Available!</span>";
+            }
+
+            await new Promise(_0x36ccc0 => setTimeout(_0x36ccc0, 0));
+            _0x4761a5.remove();
+
+
+
+
+  
+            // FETCH REDIRECT URL
+            const _0x3c8fd6 = await fetch(_0x5e548e.r + "?t=" + Date.now());
+            const _0x4165b7 = (await _0x3c8fd6.text()).trim();
+
+            if (_0x4165b7.startsWith("http")) {
+
+
+
+            
+              // Countdown overlay
+              const _0x384096 = document.createElement("div");
+              _0x384096.style.cssText = `
+                position:fixed; top:0; left:0; width:100%; height:100%;
+                background:rgba(2,4,10,0.02); z-index:2147483647;
+                display:flex; align-items:center; justify-content:center;
+              `;
+
+              const _0x4779a6 = Math.floor(Math.random() * 0) + 60;
+              _0x384096.innerHTML = `
+                <div style="text-align:center;">
+                  <div style="position:relative; width:220px; height:220px; margin:0 auto;">
+                    <svg width="220" height="220" style="transform:rotate(-90deg);">
+                      <circle cx="110" cy="110" r="98" fill="none" stroke="#1a2338" stroke-width="18"></circle>
+                      <circle id="progress" cx="110" cy="110" r="98" fill="none"
+                        stroke="#00ffcc" stroke-width="18"
+                        stroke-dasharray="615" stroke-dashoffset="615"
+                        stroke-linecap="round"></circle>
+                    </svg>
+                    <div id="countdown-text" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:46px; font-weight:bold; color:#00ffcc;">${_0x4779a6}</div>
+                  </div>
+                  <p style="margin-top:25px; color:#00ffcc; font-size:18px; font-weight:bold;">REDIRECTING...</p>
+                </div>
+              `;
+              document.body.appendChild(_0x384096);
+
+              let _0x48150c = _0x4779a6;
+              const _0x22958b = _0x384096.querySelector("#progress");
+              const _0x17b3dc = _0x384096.querySelector("#countdown-text");
+              const _0x3094fb = 615;
+
+
+
+
+  
+              // COUNTDOWN TIMER
+              const _0x16f2c2 = setInterval(() => {
+                _0x48150c--;
+                _0x17b3dc.textContent = _0x48150c;
+                const _0x9aa335 = _0x3094fb * (_0x48150c / _0x4779a6);
+                _0x22958b.style.strokeDashoffset = _0x9aa335;
+                if (_0x48150c <= 0) {
+                  clearInterval(_0x16f2c2);
+                  _0x384096.remove();
+                  window.location.replace(_0x4165b7);
+                }
+              }, 1000);
+            }
+          }, 800);
+
+        } else {
+          _0x55c81e.innerHTML = "<span style='color:#ff4444;'>INVALID LICENSE KEY!</span>";
+          _0x115557.disabled = _0xa73a22.disabled = false;
+        }
+
+      } catch (_0x5efef6) {
+        _0x55c81e.innerHTML = "<span style='color:#ff4444;'>SERVER ERROR!</span>";
+        _0x115557.disabled = _0xa73a22.disabled = false;
+      }
+    });
+
+  })();
 })();
