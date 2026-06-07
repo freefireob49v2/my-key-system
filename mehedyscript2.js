@@ -19,7 +19,7 @@
   const CONFIG = {
     k: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key2.txt",
     r: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/mehedy.txt",
-    t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button.txt",
+    t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button2.txt",
     m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
     s: `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
         background:rgba(6,10,23,0.95);backdrop-filter:blur(12px);
@@ -106,7 +106,7 @@
         width:100%;background:#229ED9;color:#fff;border:none;
         padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
         font-size:14px;letter-spacing:0.5px;
-        box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM Ꮇᴇͥʜͣᴇͫᴅƴ</button>
+        box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM ❗𝐒𝐓 𝐋𝐈𝐕𝐄¹¹ 𝐎𝐅𝐂 ❗</button>
 
       <div id="mehedy-status" style="margin-top:16px;font-size:11px;font-weight:700;
                                    color:#64748b;letter-spacing:1.5px;">MADE WITH Ꮇᴇͥʜͣᴇͫᴅƴ</div>
