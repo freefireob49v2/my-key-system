@@ -20,7 +20,7 @@
     k: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key2.txt",
     r: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/mehedy.txt",
     t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button2.txt",
-    m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
+    m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music2.mp3",
     s: `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
         background:rgba(6,10,23,0.95);backdrop-filter:blur(12px);
         -webkit-backdrop-filter:blur(12px);color:#fff;padding:30px 25px;
