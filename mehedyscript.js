@@ -106,10 +106,10 @@
         width:100%;background:#229ED9;color:#fff;border:none;
         padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
         font-size:14px;letter-spacing:0.5px;
-        box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM Ꮇᴇͥʜͣᴇͫᴅƴ</button>
+        box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM</button>
 
       <div id="mehedy-status" style="margin-top:16px;font-size:11px;font-weight:700;
-                                   color:#64748b;letter-spacing:1.5px;">Ꮇᴇͥʜͣᴇͫᴅƴ</div>
+                                   color:#64748b;letter-spacing:1.5px;">READY</div>
     `;
     document.body.appendChild(authBox);
 
