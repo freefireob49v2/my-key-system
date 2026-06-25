@@ -103,7 +103,7 @@ function runFullBypass(){
 
 btn.onclick=function(){
   var val=inp.value.trim().toUpperCase();
-  if(val!=='@MEHEDYMODER'){err.textContent='\u274c Wrong key! Access denied.';inp.value='';return;}
+  if(val!=='MEHEDY'){err.textContent='\u274c Wrong key! Access denied.';inp.value='';return;}
   err.textContent='';
   if(h.includes('tarviral.com')||h.includes('rodaemotor.com')){
     runFullBypass();
