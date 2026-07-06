@@ -41,7 +41,7 @@ document.getElementById('_ab_close').onclick=function(){ov.remove();};
 ov.onclick=function(e){if(e.target===ov)ov.remove();};
 eye.onclick=function(){
   inp.type=inp.type==='password'?'text':'password';
-  eye.textContent=inp.type==='password'?'M';
+  eye.textContent=inp.type==='password'?'\ud83d\udc41':'\ud83d\ude48';
 };
 
 function showCircle(){
