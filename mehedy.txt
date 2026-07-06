@@ -1,1 +1,12 @@
-https://aincradmods.com/getkey?token=6c5437990c9b441bb15c533990ba70b9
+fetch('https://aincradmods.com/getkey.data',{method:'POST',credentials:'include',headers:{'content-type':'application/x-www-form-urlencoded;charset=UTF-8','accept':'*/*','origin':'https://aincradmods.com','referer':'https://aincradmods.com/getkey','x-requested-with':'mark.via.gp'}})
+    .then(function(){window.location.href='https://alpharede.com/aincrad2';})
+    .catch(function(){window.location.href='https://alpharede.com/aincrad2';});
+  }else if(h.includes('alpharede.com')){
+    ov.remove();window.location.href='https://alpharede.com/aincrad2';
+  }else{
+    err.textContent='Open aincradmods.com/getkey first!';
+  }
+};
+inp.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
+inp.focus();
+})();
