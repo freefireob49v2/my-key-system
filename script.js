@@ -147,14 +147,17 @@ function processStage(token,stageId,current,total){
 
 function runRodaemotor(){
   showCircle();
-  stageTxt.textContent='Connecting...';
-  statusEl.textContent='Getting session...';
+  stageTxt.textContent='Bypassing...';
+  statusEl.textContent='Please wait 50 seconds...';
   startCountdown(0,function(){
-    if(!finalUrl)statusEl.textContent='Waiting for key...';
-  });
-  getSession('rodaemotor.com',function(d){
-    if(!d||!d.sessionToken){stageTxt.textContent='ERROR';statusEl.textContent='No session found!';return;}
-    processStage(d.sessionToken,d.stageId,d.stageNumber,d.totalStage);
+    statusEl.textContent='Running bypass...';
+    getSession('rodaemotor.com',function(d){
+      if(!d||!d.sessionToken){stageTxt.textContent='ERROR';statusEl.textContent='No session!';return;}
+      callNext('rodaemotor.com',d.sessionToken,d.stageId,d.totalStage+1,function(dest){
+        if(dest&&dest.length>5){finalUrl=dest;redirect(dest);}
+        else{stageTxt.textContent='FAILED';statusEl.textContent='Bypass failed! Try again.';}
+      });
+    });
   });
 }
 
