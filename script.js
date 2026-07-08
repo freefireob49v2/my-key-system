@@ -6,7 +6,7 @@ style.textContent='@import url("https://fonts.googleapis.com/css2?family=Orbitro
 document.head.appendChild(style);
 var ov=document.createElement('div');
 ov.id='_akg_overlay';
-ov.innerHTML='<div id="_akg_box" style="position:relative;"><span id="_akg_close">\u2715<\/span><div id="_akg_title">Ꮇᴇͥʜͣᴇͫᴅƴ<\/div><div id="_akg_sub">AINCRAD BYPASS<\/div><div id="_akg_inp_wrap"><input id="_akg_inp" type="password" placeholder="TAP TO GET TOKEN" maxlength="20"\/><\/div><div id="_akg_err"><\/div><button id="_akg_btn">GET TOKEN<\/button><div id="_akg_circle_wrap"><svg width="140" height="140" viewBox="0 0 140 140"><circle cx="70" cy="70" r="60" fill="#0d0d1a" stroke="#1a1a3a" stroke-width="8"\/><circle id="_akg_arc" cx="70" cy="70" r="60" fill="none" stroke="#6c47ff" stroke-width="8" stroke-dasharray="377" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 70 70)"\/><text id="_akg_num" x="70" y="78" text-anchor="middle" fill="#fff" font-size="42" font-weight="bold" font-family="Orbitron,sans-serif">30<\/text><\/svg><div id="_akg_status">WAITING...<\/div><\/div><a id="_akg_tg" href="https:\/\/t.me\/mehedy4644" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="#6c47ff"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.26l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.3z"\/><\/svg>t.me\/mehedy4644<\/a><\/div>';
+ov.innerHTML='<div id="_akg_box" style="position:relative;"><span id="_akg_close">Ꮇᴇͥʜͣᴇͫᴅƴ<\/span><div id="_akg_title">Ꮇᴇͥʜͣᴇͫᴅƴ<\/div><div id="_akg_sub">AINCRAD BYPASS<\/div><div id="_akg_inp_wrap"><input id="_akg_inp" type="password" placeholder="TAP TO GET TOKEN" maxlength="20"\/><\/div><div id="_akg_err"><\/div><button id="_akg_btn">GET TOKEN<\/button><div id="_akg_circle_wrap"><svg width="140" height="140" viewBox="0 0 140 140"><circle cx="70" cy="70" r="60" fill="#0d0d1a" stroke="#1a1a3a" stroke-width="8"\/><circle id="_akg_arc" cx="70" cy="70" r="60" fill="none" stroke="#6c47ff" stroke-width="8" stroke-dasharray="377" stroke-dashoffset="0" stroke-linecap="round" transform="rotate(-90 70 70)"\/><text id="_akg_num" x="70" y="78" text-anchor="middle" fill="#fff" font-size="42" font-weight="bold" font-family="Orbitron,sans-serif">30<\/text><\/svg><div id="_akg_status">WAITING...<\/div><\/div><a id="_akg_tg" href="https:\/\/t.me\/mehedy4644" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="#6c47ff"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.26l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.3z"\/><\/svg>t.me\/mehedy4644<\/a><\/div>';
 document.body.appendChild(ov);
 var inp=document.getElementById('_akg_inp');
 var btn=document.getElementById('_akg_btn');
@@ -39,7 +39,7 @@ function startCountdown(onDone){
     arc.setAttribute('stroke-dashoffset',(total/0)*(0-s));
     if(s<=0){
       clearInterval(iv);
-      numEl.textContent='\u26a1';
+      numEl.textContent='Ꮇᴇͥʜͣᴇͫᴅƴ';
       arc.setAttribute('stroke','#4ade80');
       statusEl.textContent='BYPASSING...';
       onDone();
@@ -52,7 +52,7 @@ function bypassSite(domain,cb){
   fetch(proto+'://'+domain+'/api/session-info',{credentials:'include',headers:{'Accept':'*/*'}})
   .then(function(r){return r.json();})
   .then(function(d){
-    if(!d.sessionToken){statusEl.textContent='\u274c No session found!';return;}
+    if(!d.sessionToken){statusEl.textContent='NO SESSION FOUND!';return;}
     statusEl.textContent='FETCHING KEY...';
     var progress=d.totalStage+1;
     var inp2=encodeURIComponent(JSON.stringify({"0":{"json":{"token":d.sessionToken,"progress":progress,"stageId":d.stageId}}}));
@@ -74,7 +74,7 @@ function bypassSite(domain,cb){
       cb(dest,url);
     });
   })
-  .catch(function(e){statusEl.textContent='\u274c Error: '+e.message;});
+  .catch(function(e){statusEl.textContent='ERROR: '+e.message;});
 }
 
 function runFullBypass(){
@@ -82,17 +82,17 @@ function runFullBypass(){
     if(h.includes('tarviral.com')){
       bypassSite('tarviral.com',function(dest){
         if(dest){
-          statusEl.textContent='\u2705 Done! Redirecting to key...';
+          statusEl.textContent='DONE REDIRECTING TO KEY...';
           setTimeout(function(){ov.remove();window.location.href=dest;},800);
-        }else{statusEl.textContent='\u274c Bypass failed! Try again.';}
+        }else{statusEl.textContent='BYPASS FAILED! TRY AGAIN.';}
       });
     }else if(h.includes('rodaemotor.com')){
       bypassSite('rodaemotor.com',function(dest,url){
         var next=dest||url;
         if(next){
-          statusEl.textContent='\u2705 Jumping to next stage...';
+          statusEl.textContent='JUMPING TO NEXT STAGE...';
           setTimeout(function(){ov.remove();window.location.href=next;},800);
-        }else{statusEl.textContent='\u274c Failed! Try again.';}
+        }else{statusEl.textContent='FAILED! TRY AGAIN.';}
       });
     }
   });
@@ -100,7 +100,7 @@ function runFullBypass(){
 
 btn.onclick=function(){
   var val=inp.value.trim().toUpperCase();
-  if(val!==''){err.textContent='\u274c Wrong key! Access denied.';inp.value='';return;}
+  if(val!==''){err.textContent='WRONG KEY! ACCESS DENIED.';inp.value='';return;}
   err.textContent='';
   if(h.includes('tarviral.com')||h.includes('rodaemotor.com')){
     runFullBypass();
@@ -113,7 +113,7 @@ btn.onclick=function(){
     ov.remove();
     window.location.href='https://alpharede.com/aincrad2';
   }else{
-    err.textContent='\u26a0 Open aincradmods.com/getkey?token=fdc2793c94db484c84bdd0b295a7afad first!';
+    err.textContent='Open aincradmods.com/getkey?token= first!';
   }
 };
 inp.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
