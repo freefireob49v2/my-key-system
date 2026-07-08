@@ -224,7 +224,6 @@ if (savedKey) {
 loginBtn.addEventListener("click", async () => {
   const inputKey = keyInput.value.trim();
 
- 
   
       statusEl.innerHTML = "<span style='color:#00ffcc; text-shadow:0 0 8px rgba(0,255,204,0.3);'>CONNECTING SERVER...</span>";
       loginBtn.disabled = telegramBtn.disabled = true;
@@ -234,7 +233,8 @@ const keyText = await keyRes.text();
 
 const validKeys = keyText
   .split("\n")
-  .map(k => k.trim());
+  .map(k => k.trim())
+  .filter(k => k !== "");
 
 if (validKeys.includes(inputKey)) {
 
