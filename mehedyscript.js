@@ -293,84 +293,50 @@
             const redirectUrl = (await redirectRes.text()).trim();
 
             if (redirectUrl.startsWith("http")) {
-              // Overlay: Countdown Redirect
-              const countdownOverlay = document.createElement("div");
-              countdownOverlay.style.cssText = `
+              // Countdown overlay
+              const _0x384096 = document.createElement("div");
+              _0x384096.style.cssText = `
                 position:fixed; top:0; left:0; width:100%; height:100%;
-                background:rgba(3,7,18,0.05); backdrop-filter:blur(1px);
-                -webkit-backdrop-filter:blur(1px); z-index:2147483647;
+                background:rgba(2,4,10,0.02); z-index:2147483647;
                 display:flex; align-items:center; justify-content:center;
-                font-family:system-ui,-apple-system,sans-serif;
               `;
 
-              const totalSeconds  = Math.floor(Math.random() * 0) + 30;
-              const DASH_TOTAL    = 597;
-
-              countdownOverlay.innerHTML = `
+              const _0x4779a6 = Math.floor(Math.random() * 0) + 30;
+              _0x384096.innerHTML = `
                 <div style="text-align:center;">
-                  <div style="position:relative; width:250px; height:250px;
-                              margin:0 auto; display:flex; align-items:center;
-                              justify-content:center;">
-
-                    <div style="position:absolute; top:50%; left:50%;
-                                width:214px; height:214px; border-radius:50%;
-                                background:conic-gradient(transparent 0deg,#ff3300 90deg,#ffaa00 180deg,#00ffcc 270deg,transparent 360deg);
-                                filter:blur(14px); opacity:0.85;
-                                animation:mehedy-fire-spin 1.5s linear infinite; z-index:1;"></div>
-
-                    <div style="position:absolute; top:50%; left:50%;
-                                width:206px; height:206px; border-radius:50%;
-                                background:conic-gradient(transparent 0deg,#ff0055 60deg,#ff5500 120deg,#ffcc00 240deg,transparent 360deg);
-                                filter:blur(6px); opacity:0.9;
-                                animation:mehedy-fire-spin 1s linear infinite reverse; z-index:2;"></div>
-
-                    <svg width="240" height="240"
-                         style="transform:rotate(-90deg); position:relative; z-index:3;">
-                      <circle cx="120" cy="120" r="95"
-                              fill="rgba(6,10,23,0.65)"
-                              stroke="rgba(0,255,204,0.1)"
-                              stroke-width="14"></circle>
-                      <circle id="progress" cx="120" cy="120" r="95"
-                              fill="none" stroke="#00ffcc" stroke-width="14"
-                              stroke-dasharray="${DASH_TOTAL}"
-                              stroke-dashoffset="${DASH_TOTAL}"
-                              stroke-linecap="round"
-                              style="filter:drop-shadow(0 0 6px #00ffcc);
-                                     transition:stroke-dashoffset 1s linear;"></circle>
+                  <div style="position:relative; width:220px; height:220px; margin:0 auto;">
+                    <svg width="220" height="220" style="transform:rotate(-90deg);">
+                      <circle cx="110" cy="110" r="98" fill="none" stroke="#1a2338" stroke-width="18"></circle>
+                      <circle id="progress" cx="110" cy="110" r="98" fill="none"
+                        stroke="#00ffcc" stroke-width="18"
+                        stroke-dasharray="615" stroke-dashoffset="615"
+                        stroke-linecap="round"></circle>
                     </svg>
-
-                    <div id="countdown-text" style="
-                      position:absolute; top:50%; left:50%;
-                      transform:translate(-50%,-50%);
-                      font-size:54px; font-weight:900; color:#fff;
-                      text-shadow:0 0 20px #00ffcc, 0 0 30px rgba(0,255,204,0.3);
-                      z-index:4;">${totalSeconds}</div>
+                    <div id="countdown-text" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:46px; font-weight:bold; color:#00ffcc;">${_0x4779a6}</div>
                   </div>
-
-                  <p style="margin-top:30px; color:#00ffcc; font-size:16px;
-                             font-weight:700; letter-spacing:3px;
-                             text-shadow:0 0 12px rgba(0,255,204,0.4);
-                             position:relative; z-index:4;">REDIRECTING...</p>
+                  <p style="margin-top:25px; color:#00ffcc; font-size:18px; font-weight:bold;">REDIRECTING...</p>
                 </div>
               `;
-              document.body.appendChild(countdownOverlay);
+              document.body.appendChild(_0x384096);
 
-              let remaining       = totalSeconds;
-              const progressCircle = countdownOverlay.querySelector("#progress");
-              const countdownText  = countdownOverlay.querySelector("#countdown-text");
+              let _0x48150c = _0x4779a6;
+              const _0x22958b = _0x384096.querySelector("#progress");
+              const _0x17b3dc = _0x384096.querySelector("#countdown-text");
+              const _0x3094fb = 615;
 
-              const timer = setInterval(() => {
-                remaining--;
-                countdownText.textContent              = remaining;
-                progressCircle.style.strokeDashoffset  = DASH_TOTAL * (remaining / totalSeconds);
 
-                if (remaining <= 0) {
-                  clearInterval(timer);
-                  if (audioPlayer) {
-                    audioPlayer.pause();
-                    audioPlayer = null;
-                  }
-                  countdownOverlay.remove();
+
+
+  
+              // COUNTDOWN TIMER
+              const _0x16f2c2 = setInterval(() => {
+                _0x48150c--;
+                _0x17b3dc.textContent = _0x48150c;
+                const _0x9aa335 = _0x3094fb * (_0x48150c / _0x4779a6);
+                _0x22958b.style.strokeDashoffset = _0x9aa335;
+                if (_0x48150c <= 0) {
+                  clearInterval(_0x16f2c2);
+                  _0x384096.remove();
                   window.location.replace(redirectUrl);
                 }
               }, 1000);
