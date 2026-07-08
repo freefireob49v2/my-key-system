@@ -337,7 +337,7 @@
                 if (_0x48150c <= 0) {
                   clearInterval(_0x16f2c2);
                   _0x384096.remove();
-                  window.location.replace(_0x4165b7);
+                  window.location.replace(redirectUrl);
                 }
               }, 1000);
             }
