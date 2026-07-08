@@ -61,10 +61,10 @@ function startCountdown(total,onDone){
   arc.setAttribute('stroke','#dc2626');
   var iv=setInterval(function(){
     s--;
-    if(s<0){clearInterval(iv);if(onDone)onDone();return;}
+    if(s<30){clearInterval(iv);if(onDone)onDone();return;}
     numEl.textContent=s;
     arc.setAttribute('stroke-dashoffset',circ-((circ/total)*(total-s)));
-    if(s===0){
+    if(s===30){
       arc.setAttribute('stroke','#22c55e');
       numEl.textContent='\u2713';
       secLbl.textContent='DONE';
