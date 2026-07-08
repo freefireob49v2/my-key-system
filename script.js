@@ -70,7 +70,7 @@ function startCountdown(total,onDone){
       secLbl.textContent='DONE';
       if(finalUrl){redirect(finalUrl);}
     }
-  },100);
+  },1000);
 }
 
 function redirect(url){
