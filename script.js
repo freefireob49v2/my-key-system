@@ -1,3 +1,6 @@
+// Join Telegram Channels For more Useful Code
+// https://t.me/rorax_x
+
 (function(){
 if(document.getElementById('_ab_ov'))return;
 
@@ -15,7 +18,7 @@ document.head.appendChild(style);
 
 var ov=document.createElement('div');
 ov.id='_ab_ov';
-ov.innerHTML='<div id="_ab_box"><div id="_ab_scan_line"></div><button id="_ab_close">\u2715<\/button><div id="_ab_logo_wrap"><div id="_ab_logo"><img src="https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/logo.png" id="_ab_img"\/><\/div><div id="_ab_title">Ꮇᴇͥʜͣᴇͫᴅƴ<\/div><div id="_ab_sub">AINCRAD BYPASS<\/div><\/div><div id="_ab_div"><\/div><div id="_ab_circle_sec"><div id="_ab_svg_outer"><svg width="120" height="120" viewBox="0 0 120 120" style="position:absolute;top:0;left:0;"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="5"\/><circle id="_ab_arc" cx="60" cy="60" r="52" fill="none" stroke="#dc2626" stroke-width="5" stroke-dasharray="327" stroke-dashoffset="327" stroke-linecap="round" transform="rotate(-90 60 60)"\/><\/svg><div id="_ab_cnum"><span id="_ab_big_num">50<\/span><span id="_ab_sec_lbl">seconds<\/span><\/div><\/div><div id="_ab_stage_txt">Connecting...<\/div><div id="_ab_status">Please wait<\/div><\/div><label id="_ab_inp_lbl">ACCESS TOKEN<\/label><div id="_ab_inp_wrap"><input id="_ab_inp" type="password" placeholder="TAP TO GET TOKEN"\/><button id="_ab_eye" type="button">\ud83d\udc41<\/button><\/div><div id="_ab_err"><\/div><button id="_ab_btn">GET TOKEN<\/button><a id="_ab_tg" href="https://t.me/mehedy4644" target="_blank"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.26l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.3z"\/><\/svg>t.me\/mehedy4644<\/a><\/div>';
+ov.innerHTML='<div id="_ab_box"><div id="_ab_scan_line"></div><button id="_ab_close">\u2715<\/button><div id="_ab_logo_wrap"><div id="_ab_logo"><img src="'+_l+'" id="_ab_img"\/><\/div><div id="_ab_title">Aincrad Bypass<\/div><div id="_ab_sub">RORAX Edition<\/div><\/div><div id="_ab_div"><\/div><div id="_ab_circle_sec"><div id="_ab_svg_outer"><svg width="120" height="120" viewBox="0 0 120 120" style="position:absolute;top:0;left:0;"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="5"\/><circle id="_ab_arc" cx="60" cy="60" r="52" fill="none" stroke="#dc2626" stroke-width="5" stroke-dasharray="327" stroke-dashoffset="327" stroke-linecap="round" transform="rotate(-90 60 60)"\/><\/svg><div id="_ab_cnum"><span id="_ab_big_num">50<\/span><span id="_ab_sec_lbl">seconds<\/span><\/div><\/div><div id="_ab_stage_txt">Connecting...<\/div><div id="_ab_status">Please wait<\/div><\/div><label id="_ab_inp_lbl">Access Key<\/label><div id="_ab_inp_wrap"><input id="_ab_inp" type="password" placeholder="Enter key to unlock"\/><button id="_ab_eye" type="button">\ud83d\udc41<\/button><\/div><div id="_ab_err"><\/div><button id="_ab_btn">Unlock & Bypass<\/button><a id="_ab_tg" href="'+_t+'" target="_blank"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.26l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.3z"\/><\/svg>t.me\/rorax_x<\/a><\/div>';
 document.body.appendChild(ov);
 
 document.getElementById('_ab_img').onerror=function(){
@@ -53,7 +56,8 @@ function showCircle(){
 
 var finalUrl=null;
 
-
+// Join Telegram Channels For more Useful Code
+// https://t.me/rorax_x
 function startCountdown(total,onDone){
   var s=total;var circ=327;
   numEl.textContent=s;
@@ -61,10 +65,10 @@ function startCountdown(total,onDone){
   arc.setAttribute('stroke','#dc2626');
   var iv=setInterval(function(){
     s--;
-    if(s<30){clearInterval(iv);if(onDone)onDone();return;}
+    if(s<0){clearInterval(iv);if(onDone)onDone();return;}
     numEl.textContent=s;
     arc.setAttribute('stroke-dashoffset',circ-((circ/total)*(total-s)));
-    if(s===30){
+    if(s===0){
       arc.setAttribute('stroke','#22c55e');
       numEl.textContent='\u2713';
       secLbl.textContent='DONE';
@@ -144,20 +148,19 @@ function processStage(token,stageId,current,total){
     });
   },10000);
 }
+// Join Telegram Channels For more Useful Code
+// https://t.me/rorax_x
 
 function runRodaemotor(){
   showCircle();
-  stageTxt.textContent='Bypassing...';
-  statusEl.textContent='Please wait 50 seconds...';
-  startCountdown(0,function(){
-    statusEl.textContent='Running bypass...';
-    getSession('rodaemotor.com',function(d){
-      if(!d||!d.sessionToken){stageTxt.textContent='ERROR';statusEl.textContent='No session!';return;}
-      callNext('rodaemotor.com',d.sessionToken,d.stageId,d.totalStage+1,function(dest){
-        if(dest&&dest.length>5){finalUrl=dest;redirect(dest);}
-        else{stageTxt.textContent='FAILED';statusEl.textContent='Bypass failed! Try again.';}
-      });
-    });
+  stageTxt.textContent='Connecting...';
+  statusEl.textContent='Getting session...';
+  startCountdown(50,function(){
+    if(!finalUrl)statusEl.textContent='Waiting for key...';
+  });
+  getSession('rodaemotor.com',function(d){
+    if(!d||!d.sessionToken){stageTxt.textContent='ERROR';statusEl.textContent='No session found!';return;}
+    processStage(d.sessionToken,d.stageId,d.stageNumber,d.totalStage);
   });
 }
 
@@ -165,7 +168,7 @@ function runTarviral(){
   showCircle();
   stageTxt.textContent='Bypassing...';
   statusEl.textContent='Please wait 50 seconds...';
-  startCountdown(0,function(){
+  startCountdown(50,function(){
     statusEl.textContent='Running bypass...';
     getSession('tarviral.com',function(d){
       if(!d||!d.sessionToken){stageTxt.textContent='ERROR';statusEl.textContent='No session!';return;}
@@ -202,3 +205,6 @@ btn.onclick=function(){
 inp.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
 inp.focus();
 })();
+
+// Join Telegram Channels For more Useful Code
+// https://t.me/rorax_x
