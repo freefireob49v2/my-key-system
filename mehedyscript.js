@@ -213,10 +213,11 @@
       } catch { /* silent */ }
     });
 
-  
  
  
-          statusEl.innerHTML = "<span style='color:#00ffcc;'>KEY VALIDATED! ✓</span>";
+ 
+ 
+    loginBtn.addEventListener = "<span style='color:#00ffcc;'>KEY VALIDATED! ✓</span>";
 
           setTimeout(async () => {
             authBox.remove();
