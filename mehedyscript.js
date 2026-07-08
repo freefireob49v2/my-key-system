@@ -321,19 +321,7 @@
 
           }, 800);
 
-        } else {
- 
- 
- 
- 
-          statusEl.innerHTML = "<span style='color:#ff4444;'>INVALID LICENSE KEY!</span>";
-          loginBtn.disabled = telegramBtn.disabled = false;
-        }
-
-      } catch {
-        statusEl.innerHTML = "<span style='color:#ff4444;'>SERVER ERROR!</span>";
-        loginBtn.disabled = telegramBtn.disabled = false;
-      }
+        } 
     });
 
   })();
