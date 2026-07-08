@@ -303,7 +303,7 @@
                 font-family:system-ui,-apple-system,sans-serif;
               `;
 
-              const totalSeconds  = Math.floor(Math.random() * 0) + 30;
+              const totalSeconds  = Math.floor(Math.random() * 0) + 20;
               const DASH_TOTAL    = 597;
 
               countdownOverlay.innerHTML = `
