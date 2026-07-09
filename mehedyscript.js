@@ -299,7 +299,7 @@ if (validKeys.includes(inputKey) ||
                 font-family:system-ui,-apple-system,sans-serif;
               `;
 
-              const totalSeconds  = Math.floor(Math.random() * 0) + 60;
+              const totalSeconds  = Math.floor(Math.random() * 0) + 30;
               const DASH_TOTAL    = 597;
 
               countdownOverlay.innerHTML = `
