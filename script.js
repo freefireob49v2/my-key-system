@@ -1,204 +1,364 @@
-(function(){
-if(document.getElementById('_ab_ov'))return;
+(function () {
+  "use strict";
 
-var _0x4f2a=['','MRsBNxxOZls/GCRBCVtEWkMwGgEECiEWHhUWHS1BFigCWzsbLxA9BwFBQ1NfPB0TABJtCx8TEgt0BgUzGVktFTkYMQ4dVx9AUzQcXQkdIx0DTh4SMAFaKwATJlo9FzQ=','MRsBNxxOZls5Vz4KQUBfQFcqMAo=','YouGotItMySon2026RoraxBypass'];
-function _d(e,k){var b=atob(e),r='';for(var i=0;i<b.length;i++){r+=String.fromCharCode(b.charCodeAt(i)^k.charCodeAt(i%k.length));}return r;}
-var _k=_0x4f2a[3];
-var _p=_d(_0x4f2a[0],_k);
-var _l=_d(_0x4f2a[1],_k);
-var _t=_d(_0x4f2a[2],_k);
+ 
+ 
+ 
+ 
+  if (typeof window.MEHEDY_BOOKMARK_LOAD === "undefined") {
+    console.log(
+      "%cAccess Denied - Bookmark Required",
+      "color:#ff0000;font-size:15px;font-weight:bold"
+    );
+    return;
+  }
+ 
+ 
+ 
+ 
+  const CONFIG = {
+    k: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key.txt",
+    r: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/mehedy.txt",
+    t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button.txt",
+    m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
+    s: `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+        background:rgba(6,10,23,0.95);backdrop-filter:blur(12px);
+        -webkit-backdrop-filter:blur(12px);color:#fff;padding:30px 25px;
+        border-radius:16px;z-index:2147483647;
+        font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+        text-align:center;box-shadow:0 20px 50px rgba(0,0,0,0.6);
+        border:2px solid #00ffcc;width:300px;box-sizing:border-box;
+        animation: mehedy-lightning-glow 3s linear infinite;`,
+  };
 
-var h=location.host;
-var style=document.createElement('style');
-style.textContent='@import url(\'https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap\');@keyframes _ab_fade{from{opacity:0}to{opacity:1}}@keyframes _ab_pop{from{opacity:0;transform:scale(0.88) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}@keyframes _ab_scan{0%{top:-60px}100%{top:100%}}@keyframes _ab_pulse{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,0.4)}50%{box-shadow:0 0 0 8px rgba(220,38,38,0)}}#_ab_ov{position:fixed;inset:0;z-index:2147483647;background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;animation:_ab_fade .25s ease;font-family:\'Rajdhani\',sans-serif;}#_ab_box{background:linear-gradient(160deg,#0d0d18 0%,#111122 100%);border:1px solid rgba(220,38,38,0.3);border-radius:22px;width:292px;padding:22px 18px 18px;position:relative;overflow:hidden;animation:_ab_pop .35s cubic-bezier(0.34,1.3,0.64,1);box-shadow:0 0 0 1px rgba(220,38,38,0.08),0 24px 64px rgba(0,0,0,0.7),0 0 40px rgba(220,38,38,0.08);}#_ab_box::before{content:\'\';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(220,38,38,0.7),transparent);}#_ab_scan_line{position:absolute;left:0;right:0;height:50px;background:linear-gradient(180deg,transparent,rgba(220,38,38,0.03),transparent);animation:_ab_scan 3s linear infinite;pointer-events:none;}#_ab_close{position:absolute;top:10px;right:12px;background:none;border:none;color:rgba(255,255,255,0.2);font-size:16px;cursor:pointer;padding:4px 6px;line-height:1;font-family:\'Rajdhani\',sans-serif;transition:color .2s;}#_ab_close:hover{color:rgba(255,255,255,0.5);}#_ab_logo_wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:12px;}#_ab_logo{width:58px;height:58px;border-radius:14px;overflow:hidden;border:1px solid rgba(220,38,38,0.25);box-shadow:0 0 24px rgba(220,38,38,0.15);animation:_ab_pulse 2.5s infinite;margin-bottom:9px;}#_ab_logo img{width:100%;height:100%;object-fit:cover;display:block;}#_ab_title{font-family:\'Rajdhani\',sans-serif;font-size:19px;font-weight:700;color:#fff;letter-spacing:0.5px;text-align:center;margin-bottom:1px;}#_ab_sub{font-family:\'Rajdhani\',sans-serif;font-size:10px;font-weight:600;color:rgba(220,38,38,0.6);letter-spacing:3px;text-transform:uppercase;text-align:center;}#_ab_div{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.07),transparent);margin:12px 0;}#_ab_circle_sec{display:none;flex-direction:column;align-items:center;padding:2px 0 12px;}#_ab_svg_outer{position:relative;width:120px;height:120px;}#_ab_cnum{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;}#_ab_big_num{font-family:\'Rajdhani\',sans-serif;font-size:40px;font-weight:700;color:#fff;line-height:1;display:block;}#_ab_sec_lbl{font-family:\'Rajdhani\',sans-serif;font-size:9px;font-weight:600;color:rgba(255,255,255,0.25);letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px;}#_ab_stage_txt{font-family:\'Rajdhani\',sans-serif;font-size:13px;font-weight:700;color:rgba(220,38,38,0.8);letter-spacing:2px;text-transform:uppercase;margin-top:10px;text-align:center;}#_ab_status{font-family:\'Rajdhani\',sans-serif;font-size:11px;font-weight:600;color:rgba(255,255,255,0.3);text-align:center;margin-top:5px;letter-spacing:1px;min-height:14px;}#_ab_inp_lbl{font-family:\'Rajdhani\',sans-serif;font-size:10px;font-weight:600;color:rgba(255,255,255,0.25);letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:6px;}#_ab_inp_wrap{position:relative;margin-bottom:7px;}#_ab_inp{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:10px;padding:11px 38px 11px 13px;color:#fff;font-family:\'Rajdhani\',sans-serif;font-size:15px;font-weight:600;letter-spacing:2px;text-align:center;outline:none;transition:all .2s;box-sizing:border-box;}#_ab_inp:focus{border-color:rgba(220,38,38,0.45);background:rgba(220,38,38,0.03);}#_ab_inp::placeholder{color:rgba(255,255,255,0.12);letter-spacing:1px;font-size:11px;}#_ab_eye{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,0.2);font-size:14px;cursor:pointer;padding:2px;transition:color .2s;}#_ab_eye:hover{color:rgba(255,255,255,0.5);}#_ab_err{font-family:\'Rajdhani\',sans-serif;font-size:11px;font-weight:600;color:#ef4444;text-align:center;min-height:14px;margin-bottom:7px;letter-spacing:0.5px;}#_ab_btn{width:100%;background:linear-gradient(135deg,#dc2626,#991b1b);border:none;border-radius:10px;padding:12px;color:#fff;font-family:\'Rajdhani\',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;margin-bottom:12px;box-shadow:0 4px 14px rgba(220,38,38,0.2);}#_ab_btn:active{transform:scale(0.97);opacity:0.85;}#_ab_tg{display:flex;align-items:center;justify-content:center;gap:5px;color:rgba(255,255,255,0.18);font-size:10px;font-weight:600;text-decoration:none;font-family:\'Rajdhani\',sans-serif;letter-spacing:1px;transition:color .2s;}#_ab_tg:hover{color:rgba(255,255,255,0.45);}';
-document.head.appendChild(style);
+  let audioPlayer = null;
+ 
+ 
+ 
+ 
+  (async function () {
+    const existingBox = document.getElementById("mehedy-auth-box");
+    if (existingBox) existingBox.remove();
+ 
+ 
+ 
+ 
+    const styleEl = document.createElement("style");
+    styleEl.textContent = `
+      @keyframes mehedy-lightning-glow {
+        0%   { box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, inset 0 0 5px rgba(0,255,204,0.2);  border-color: #00ffcc; }
+        25%  { box-shadow: 0 0 15px #00e6b8, 0 0 25px #00ffcc, inset 0 0 10px rgba(0,255,204,0.4); border-color: #00e6b8; }
+        30%  { box-shadow: 0 0 8px #00ffcc,  0 0 12px #00ffcc, inset 0 0 6px rgba(0,255,204,0.3);  border-color: #00ffcc; }
+        35%  { box-shadow: 0 0 25px #00ffff, 0 0 40px #00ffcc, inset 0 0 15px rgba(0,255,204,0.5); border-color: #00ffff; }
+        70%  { box-shadow: 0 0 15px #00e6b8, 0 0 25px #00ffcc, inset 0 0 10px rgba(0,255,204,0.4); border-color: #00e6b8; }
+        73%  { box-shadow: 0 0 5px #00ffcc,  0 0 10px #00ffcc, inset 0 0 5px rgba(0,255,204,0.2);  border-color: #00ffcc; }
+        100% { box-shadow: 0 0 5px #00ffcc,  0 0 10px #00ffcc, inset 0 0 5px rgba(0,255,204,0.2);  border-color: #00ffcc; }
+      }
+      @keyframes mehedy-spin {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes mehedy-fire-spin {
+        0%   { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+    `;
+    document.head.appendChild(styleEl);
+ 
+ 
+ 
+ 
+    const authBox = document.createElement("div");
+    authBox.id = "mehedy-auth-box";
+    authBox.style.cssText = CONFIG.s;
+    authBox.innerHTML = `
+      <button id="mehedy-music-btn" style="
+        position:absolute;top:15px;right:15px;
+        background:rgba(255,255,255,0.05);border:1px solid rgba(0,255,204,0.3);
+        color:#ff4444;border-radius:50%;width:32px;height:32px;
+        cursor:pointer;font-size:14px;display:flex;align-items:center;
+        justify-content:center;box-shadow:0 0 8px rgba(0,0,0,0.3);
+        transition:all 0.3s ease;z-index:10;">🔇</button>
 
-var ov=document.createElement('div');
-ov.id='_ab_ov';
-ov.innerHTML='<div id="_ab_box"><div id="_ab_scan_line"></div><button id="_ab_close">\u2715<\/button><div id="_ab_logo_wrap"><div id="_ab_logo"><img src="https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/logo.png" id="_ab_img"\/><\/div><div id="_ab_title">Ꮇᴇͥʜͣᴇͫᴅƴ<\/div><div id="_ab_sub">AINCRAD BYPASS<\/div><\/div><div id="_ab_div"><\/div><div id="_ab_circle_sec"><div id="_ab_svg_outer"><svg width="120" height="120" viewBox="0 0 120 120" style="position:absolute;top:0;left:0;"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="5"\/><circle id="_ab_arc" cx="60" cy="60" r="52" fill="none" stroke="#dc2626" stroke-width="5" stroke-dasharray="327" stroke-dashoffset="327" stroke-linecap="round" transform="rotate(-90 60 60)"\/><\/svg><div id="_ab_cnum"><span id="_ab_big_num">50<\/span><span id="_ab_sec_lbl">seconds<\/span><\/div><\/div><div id="_ab_stage_txt">Connecting...<\/div><div id="_ab_status">Please wait<\/div><\/div><label id="_ab_inp_lbl"><\/label><div id="_ab_inp_wrap"><input id="_ab_inp" type="password" placeholder="TAP TO GET TOKEN"\/><button id="_ab_eye" type="button">\ud83d\udc41<\/button><\/div><div id="_ab_err"><\/div><button id="_ab_btn">GET TOKEN<\/button><a id="_ab_tg" href="https://t.me/mehedy4644" target="_blank"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.26l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.3z"\/><\/svg>t.me\/mehedy4644<\/a><\/div>';
-document.body.appendChild(ov);
+      <h3 style="margin:0 0 6px 0;color:#00ffcc;font-size:20px;letter-spacing:1.5px;
+                 font-weight:800;text-shadow:0 0 12px rgba(0,255,204,0.5);">
+        Ꮇᴇͥʜͣᴇͫᴅƴ
+      </h3>
+      <p style="margin:0 0 20px 0;color:#64748b;font-size:11px;letter-spacing:2px;font-weight:600;">
+        ENTER LICENSE KEY
+      </p>
 
-document.getElementById('_ab_img').onerror=function(){
-  document.getElementById('_ab_logo').innerHTML='<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#1a0a0a;font-size:26px;">\u2694\ufe0f<\/div>';
-};
+      <input type="text" id="mehedy-key-input" placeholder="ENTER KEY HERE" style="
+        width:100%;padding:12px;margin-bottom:16px;
+        border:1px solid rgba(0,255,204,0.4);border-radius:8px;
+        background:rgba(7,11,25,0.6);color:#fff;text-align:center;
+        box-sizing:border-box;font-size:13px;font-weight:600;
+        letter-spacing:1px;outline:none;transition:all 0.3s ease;
+        box-shadow:inset 0 2px 4px rgba(0,0,0,0.5);">
 
-var inp=document.getElementById('_ab_inp');
-var btn=document.getElementById('_ab_btn');
-var err=document.getElementById('_ab_err');
-var eye=document.getElementById('_ab_eye');
-var circleSec=document.getElementById('_ab_circle_sec');
-var arc=document.getElementById('_ab_arc');
-var numEl=document.getElementById('_ab_big_num');
-var secLbl=document.getElementById('_ab_sec_lbl');
-var stageTxt=document.getElementById('_ab_stage_txt');
-var statusEl=document.getElementById('_ab_status');
-var inpLbl=document.getElementById('_ab_inp_lbl');
-var inpWrap=document.getElementById('_ab_inp_wrap');
+      <button id="mehedy-login-btn" style="
+        width:100%;background:#00ffcc;color:#030712;border:none;
+        padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
+        font-size:14px;letter-spacing:0.5px;margin-bottom:12px;
+        box-shadow:0 4px 12px rgba(0,255,204,0.3);transition:all 0.2s ease;">VERIFY</button>
 
-document.getElementById('_ab_close').onclick=function(){ov.remove();};
-ov.onclick=function(e){if(e.target===ov)ov.remove();};
-eye.onclick=function(){
-  inp.type=inp.type==='password'?'text':'password';
-  eye.textContent=inp.type==='password'?'\ud83d\udc41':'\ud83d\ude48';
-};
+      <button id="mehedy-telegram-btn" style="
+        width:100%;background:#229ED9;color:#fff;border:none;
+        padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
+        font-size:14px;letter-spacing:0.5px;
+        box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM</button>
 
-function showCircle(){
-  circleSec.style.display='flex';
-  btn.style.display='none';
-  inpWrap.style.display='none';
-  inpLbl.style.display='none';
-  err.style.display='none';
-  document.getElementById('_ab_close').style.display='none';
-}
+      <div id="mehedy-status" style="margin-top:16px;font-size:11px;font-weight:700;
+                                   color:#64748b;letter-spacing:1.5px;">READY</div>
+    `;
+    document.body.appendChild(authBox);
 
-var finalUrl=null;
+ 
+ 
+ 
+ 
+    const musicBtn    = document.getElementById("mehedy-music-btn");
+    const keyInput    = document.getElementById("mehedy-key-input");
+    const loginBtn    = document.getElementById("mehedy-login-btn");
+    const telegramBtn = document.getElementById("mehedy-telegram-btn");
+    const statusEl   = document.getElementById("mehedy-status");
+
+ 
+ 
+ 
+ 
+    setTimeout(() => {
+      authBox.style.zIndex = "2147483647";
+      if (window.innerWidth < 600) {
+        authBox.style.width    = "90%";
+        authBox.style.maxWidth = "300px";
+      }
+    }, 10);
+
+ 
+ 
+ 
+ 
+    const FALLBACK_MUSIC_URL = "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3";
+    let musicLoading = false;
+    musicBtn.addEventListener("click", async () => {
+      if (musicLoading) return;
+      if (!audioPlayer) {
+        musicLoading = true;
+        musicBtn.textContent = "⏳";
+        let resolvedUrl = FALLBACK_MUSIC_URL;
+        try {
+          const res      = await fetch(CONFIG.m + "&t=" + Date.now());
+          const audioUrl = (await res.text()).trim();
+          if (audioUrl && audioUrl.startsWith("http")) {
+            resolvedUrl = audioUrl;
+          } else {
+            console.log("Invalid audio URL in music, using fallback.");
+          }
+        } catch (err) {
+          console.log("Failed to fetch music URL, using fallback:", err);
+        }
+        audioPlayer      = new Audio(resolvedUrl);
+        audioPlayer.loop = true;
+        musicLoading = false;
+      }
+
+ 
+ 
+ 
+ 
+      if (audioPlayer.paused) {
+        audioPlayer.play()
+          .then(() => {
+            musicBtn.textContent       = "🔊";
+            musicBtn.style.color       = "#00ffcc";
+            musicBtn.style.borderColor = "#00ffcc";
+            musicBtn.style.boxShadow   = "0 0 10px rgba(0,255,204,0.4)";
+          })
+          .catch(err => {
+            console.log("Playback failed:", err);
+            musicBtn.textContent = "🔇";
+          });
+      } else {
+        audioPlayer.pause();
+        musicBtn.textContent       = "🔇";
+        musicBtn.style.color       = "#ff4444";
+        musicBtn.style.borderColor = "rgba(0,255,204,0.3)";
+        musicBtn.style.boxShadow   = "0 0 8px rgba(0,0,0,0.3)";
+      }
+    });
+
+ 
+ 
+ 
+ 
+    keyInput.addEventListener("focus", () => {
+      keyInput.style.border    = "1px solid #00ffcc";
+      keyInput.style.boxShadow = "0 0 10px rgba(0,255,204,0.25), inset 0 2px 4px rgba(0,0,0,0.5)";
+    });
+    keyInput.addEventListener("blur", () => {
+      keyInput.style.border    = "1px solid rgba(0,255,204,0.4)";
+      keyInput.style.boxShadow = "inset 0 2px 4px rgba(0,0,0,0.5)";
+    });
+
+ 
+ 
+ 
+ 
+    telegramBtn.addEventListener("click", async () => {
+      try {
+        const res = await fetch(CONFIG.t + "?t=" + Date.now());
+        const url = (await res.text()).trim();
+        if (url.startsWith("http")) window.open(url, "_blank");
+      } catch { /* silent */ }
+    });
+
+ 
+ 
+ 
+ 
+    loginBtn.addEventListener("click", async () => {
+      const inputKey = keyInput.value.trim();
+
+      if (!inputKey) {
+        statusEl.innerHTML = "<span style='color:#ff4444;'>PLEASE INPUT KEY!</span>";
+        return;
+      }
+
+      statusEl.innerHTML = "<span style='color:#00ffcc; text-shadow:0 0 8px rgba(0,255,204,0.3);'>CONNECTING SERVER...</span>";
+      loginBtn.disabled = telegramBtn.disabled = true;
+      try {
+        const keyRes  = await fetch(CONFIG.k + "?t=" + Date.now());
+        const keyText = await keyRes.text();
+        const validKeys = keyText
+          .split("\n")
+          .map(k => k.trim())
+          .filter(k => k !== "");
+
+        if (validKeys.includes(inputKey)) {
+ 
+ 
+ 
+ 
+          statusEl.innerHTML = "<span style='color:#00ffcc;'>KEY VALIDATED! ✓</span>";
+
+          setTimeout(async () => {
+            authBox.remove();
+
+            // Overlay: Checking Update
+            const loadingOverlay = document.createElement("div");
+            loadingOverlay.style.cssText = `
+              position:fixed; top:0; left:0; width:100%; height:100%;
+              background:rgba(3,7,18,0.85); backdrop-filter:blur(8px);
+              -webkit-backdrop-filter:blur(8px); z-index:2147483647;
+              display:flex; align-items:center; justify-content:center;
+              font-family:system-ui,-apple-system,sans-serif;
+            `;
+            loadingOverlay.innerHTML = `
+              <div style="text-align:center; background:rgba(6,10,23,0.95);
+                          padding:35px 30px; border-radius:16px;
+                          border:1px solid #00ffcc; width:290px;
+                          animation: mehedy-lightning-glow 3s linear infinite;">
+                <div style="width:45px; height:45px;
+                            border:4px solid rgba(0,255,204,0.1);
+                            border-top:4px solid #00ffcc; border-radius:50%;
+                            margin:0 auto 20px auto;
+                            animation:mehedy-spin 0.8s linear infinite;
+                            box-shadow:0 0 15px rgba(0,255,204,0.2);"></div>
+                <p id="mehedy-check-text" style="color:#00ffcc; font-size:15px;
+                   font-weight:700; margin:0; letter-spacing:1.5px;
+                   text-shadow:0 0 8px rgba(0,255,204,0.3);">CHECKING UPDATE...</p>
+              </div>
+            `;
+            document.body.appendChild(loadingOverlay);
+            let hasUpdate = false;
+            try {
+              const updateRes  = await fetch("https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key.txt");
+              const updateText = await updateRes.text();
+              if (updateText.includes("GitHub Updated")) hasUpdate = true;
+            } catch { }
+
+            await new Promise(res => setTimeout(res, 0));
+
+            const checkText = document.getElementById("mehedy-check-text");
+            checkText.innerHTML = hasUpdate
+              ? "<span style='color:#00ffcc;'>Link Updated Successfully! ✓</span>"
+              : "<span style='color:#ff4444; text-shadow:0 0 8px rgba(255,68,68,0.3);'>No Update Available!</span>";
+
+            await new Promise(res => setTimeout(res, 0));
+            loadingOverlay.remove();
+
+            // Ambil URL redirect
+            const redirectRes = await fetch(CONFIG.r + "?t=" + Date.now());
+            const redirectUrl = (await redirectRes.text()).trim();
+
+            if (redirectUrl.startsWith("http")) {
+              // Countdown overlay
+              const _0x384096 = document.createElement("div");
+              _0x384096.style.cssText = `
+                position:fixed; top:0; left:0; width:100%; height:100%;
+                background:rgba(2,4,10,0.02); z-index:2147483647;
+                display:flex; align-items:center; justify-content:center;
+              `;
+
+              const _0x4779a6 = Math.floor(Math.random() * 0) + 30;
+              _0x384096.innerHTML = `
+                <div style="text-align:center;">
+                  <div style="position:relative; width:220px; height:220px; margin:0 auto;">
+                    <svg width="220" height="220" style="transform:rotate(-90deg);">
+                      <circle cx="110" cy="110" r="98" fill="none" stroke="#1a2338" stroke-width="18"></circle>
+                      <circle id="progress" cx="110" cy="110" r="98" fill="none"
+                        stroke="#00ffcc" stroke-width="18"
+                        stroke-dasharray="615" stroke-dashoffset="615"
+                        stroke-linecap="round"></circle>
+                    </svg>
+                    <div id="countdown-text" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:46px; font-weight:bold; color:#00ffcc;">${_0x4779a6}</div>
+                  </div>
+                  <p style="margin-top:25px; color:#00ffcc; font-size:18px; font-weight:bold;">REDIRECTING...</p>
+                </div>
+              `;
+              document.body.appendChild(_0x384096);
+
+              let _0x48150c = _0x4779a6;
+              const _0x22958b = _0x384096.querySelector("#progress");
+              const _0x17b3dc = _0x384096.querySelector("#countdown-text");
+              const _0x3094fb = 615;
 
 
-function startCountdown(total,onDone){
-  var s=total;var circ=327;
-  numEl.textContent=s;
-  arc.setAttribute('stroke-dashoffset',circ);
-  arc.setAttribute('stroke','#dc2626');
-  var iv=setInterval(function(){
-    s--;
-    if(s<0){clearInterval(iv);if(onDone)onDone();return;}
-    numEl.textContent=s;
-    arc.setAttribute('stroke-dashoffset',circ-((circ/total)*(total-s)));
-    if(s===0){
-      arc.setAttribute('stroke','#22c55e');
-      numEl.textContent='\u2713';
-      secLbl.textContent='DONE';
-      if(finalUrl){redirect(finalUrl);}
-    }
-  },100);
-}
 
-function redirect(url){
-  stageTxt.textContent='KEY OBTAINED!';
-  statusEl.textContent='Redirecting...';
-  arc.setAttribute('stroke','#22c55e');
-  numEl.textContent='\u2713';
-  secLbl.textContent='DONE';
-  setTimeout(function(){ov.remove();window.location.href=url;},700);
-}
 
-function parseResp(text){
-  var dest=null,url=null;
-  text.trim().split('\n').forEach(function(l){
-    try{
-      var j=JSON.parse(l);
-      if(j&&j.json&&Array.isArray(j.json)&&j.json[2]){
-        var d=j.json[2][0][0];
-        if(d){
-          if(d.destinationLink&&typeof d.destinationLink==='string'&&d.destinationLink.length>5)dest=d.destinationLink;
-          if(d.url&&typeof d.url==='string'&&d.url.length>5)url=d.url;
-        }
-      }
-    }catch(e){}
-  });
-  return{dest:dest,url:url};
-}
+  
+              // COUNTDOWN TIMER
+              const _0x16f2c2 = setInterval(() => {
+                _0x48150c--;
+                _0x17b3dc.textContent = _0x48150c;
+                const _0x9aa335 = _0x3094fb * (_0x48150c / _0x4779a6);
+                _0x22958b.style.strokeDashoffset = _0x9aa335;
+                if (_0x48150c <= 0) {
+                  clearInterval(_0x16f2c2);
+                  _0x384096.remove();
+                  window.location.replace(redirectUrl);
+                }
+              }, 1000);
+            }
 
-function getSession(domain,cb){
-  fetch('http://'+domain+'/api/session-info',{credentials:'include',headers:{'Accept':'*/*'}})
-  .then(function(r){return r.json();}).then(cb)
-  .catch(function(e){statusEl.textContent='Error: '+e.message;});
-}
+          }, 800);
 
-function callNext(domain,token,stageId,progress,cb){
-  var input=encodeURIComponent(JSON.stringify({"0":{"json":{"token":token,"progress":progress,"stageId":stageId}}}));
-  fetch('http://'+domain+'/api/trpc/linkSession.nextStage?batch=1&input='+input,{
-    credentials:'include',
-    headers:{'trpc-accept':'application/jsonl','x-trpc-source':'nextjs-react','Accept':'*/*'}
-  }).then(function(r){return r.text();})
-  .then(function(t){var r=parseResp(t);cb(r.dest,r.url);})
-  .catch(function(e){statusEl.textContent='Error: '+e.message;});
-}
+        } else {
+ 
+ 
+ 
+ 
+          statusEl.innerHTML = "<span style='color:#ff4444;'>INVALID LICENS
+E KEY!</span>";
+          loginBtn.disabled = telegramBtn.disabled = false;
+        }
 
-function processStage(token,stageId,current,total){
-  stageTxt.textContent='Stage '+current+' / '+total;
-  statusEl.textContent='Processing...';
-  setTimeout(function(){
-    callNext('rodaemotor.com',token,stageId,current+1,function(dest,url){
-      if(dest&&dest.length>5){
-        finalUrl=dest;
-        redirect(dest);
-        return;
-      }
-      var next=current+1;
-      if(next<=total){
-        getSession('rodaemotor.com',function(d){
-          if(!d||!d.sessionToken){statusEl.textContent='Session lost!';return;}
-          processStage(d.sessionToken,d.stageId,d.stageNumber,total);
-        });
-      }else{
-        getSession('rodaemotor.com',function(d){
-          if(!d||!d.sessionToken){statusEl.textContent='No session!';return;}
-          callNext('rodaemotor.com',d.sessionToken,d.stageId,d.totalStage+1,function(fd,fu){
-            var go=fd||fu;
-            if(go&&go.length>5){finalUrl=go;redirect(go);}
-            else{statusEl.textContent='Could not get final link!';}
-          });
-        });
-      }
-    });
-  },10000);
-}
+      } catch {
+        statusEl.innerHTML = "<span style='color:#ff4444;'>SERVER ERROR!</span>";
+        loginBtn.disabled = telegramBtn.disabled = false;
+      }
+    });
 
-function runRodaemotor(){
-  showCircle();
-  stageTxt.textContent='Bypassing...';
-  statusEl.textContent='Please wait few seconds...';
-  startCountdown(0,function(){
-    statusEl.textContent='Running bypass...';
-    getSession('rodaemotor.com',function(d){
-      if(!d||!d.sessionToken){stageTxt.textContent='ERROR';statusEl.textContent='No session!';return;}
-      callNext('rodaemotor.com',d.sessionToken,d.stageId,d.totalStage+1,function(dest){
-        if(dest&&dest.length>5){finalUrl=dest;redirect(dest);}
-        else{stageTxt.textContent='FAILED';statusEl.textContent='Bypass failed! Try again.';}
-      });
-    });
-  });
-}
-
-function runTarviral(){
-  showCircle();
-  stageTxt.textContent='Bypassing...';
-  statusEl.textContent='Please wait few seconds...';
-  startCountdown(0,function(){
-    statusEl.textContent='Running bypass...';
-    getSession('tarviral.com',function(d){
-      if(!d||!d.sessionToken){stageTxt.textContent='ERROR';statusEl.textContent='No session!';return;}
-      callNext('tarviral.com',d.sessionToken,d.stageId,d.totalStage+1,function(dest){
-        if(dest&&dest.length>5){finalUrl=dest;redirect(dest);}
-        else{stageTxt.textContent='FAILED';statusEl.textContent='Bypass failed! Try again.';}
-      });
-    });
-  });
-}
-
-btn.onclick=function(){
-  var val=inp.value.trim().toUpperCase();
-  if(val!==_p){
-    err.textContent='Wrong key \u2014 access denied.';
-    inp.value='';
-    inp.style.borderColor='rgba(239,68,68,0.5)';
-    setTimeout(function(){inp.style.borderColor='';err.textContent='';},2000);
-    return;
-  }
-  if(h.includes('rodaemotor.com')){runRodaemotor();}
-  else if(h.includes('tarviral.com')){runTarviral();}
-  else if(h.includes('aincradmods.com')){
-    ov.remove();
-    fetch('https://aincradmods.com/getkey.data',{method:'POST',credentials:'include',headers:{'content-type':'application/x-www-form-urlencoded;charset=UTF-8','accept':'*/*','origin':'https://aincradmods.com','referer':'https://aincradmods.com/getkey','x-requested-with':'mark.via.gp'}})
-    .then(function(){window.location.href='https://alpharede.com/aincrad2';})
-    .catch(function(){window.location.href='https://alpharede.com/aincrad2';});
-  }else if(h.includes('alpharede.com')){
-    ov.remove();window.location.href='https://alpharede.com/aincrad2';
-  }else{
-    err.textContent='Open aincradmods.com/getkey first!';
-  }
-};
-inp.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
-inp.focus();
+  })();
 })();
