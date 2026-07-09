@@ -232,10 +232,9 @@ loginBtn.addEventListener("click", async () => {
         const keyRes  = await fetch(CONFIG.k + "?t=" + Date.now());
         const keyText = await keyRes.text();
 
-
- if (validKeys.includes(inputKey)) {    localStorage.setItem("userKey", inputKey);    statusEl.innerHTML = "<span style='color:#00ffcc;'>KEY VALIDATED! ✓</span>";
- 
- 
+const validKeys = keyText
+  .split("\n")
+  .map(k => k.trim());
  
           statusEl.innerHTML = "<span style='color:#00ffcc;'>KEY VALIDATED! ✓</span>";
 
