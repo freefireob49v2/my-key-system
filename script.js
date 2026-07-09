@@ -148,7 +148,7 @@ function processStage(token,stageId,current,total){
 function runRodaemotor(){
   showCircle();
   stageTxt.textContent='Bypassing...';
-  statusEl.textContent='Please wait 50 seconds...';
+  statusEl.textContent='Please wait few seconds...';
   startCountdown(0,function(){
     statusEl.textContent='Running bypass...';
     getSession('rodaemotor.com',function(d){
@@ -164,7 +164,7 @@ function runRodaemotor(){
 function runTarviral(){
   showCircle();
   stageTxt.textContent='Bypassing...';
-  statusEl.textContent='Please wait 50 seconds...';
+  statusEl.textContent='Please wait few seconds...';
   startCountdown(0,function(){
     statusEl.textContent='Running bypass...';
     getSession('tarviral.com',function(d){
