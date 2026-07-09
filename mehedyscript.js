@@ -224,6 +224,11 @@ if (savedKey) {
 loginBtn.addEventListener("click", async () => {
   const inputKey = keyInput.value.trim();
 
+  if (!inputKey) {
+    statusEl.innerHTML = "<span style='color:#ff4444;'>PLEASE INPUT KEY!</span>";
+    return;
+  }
+
   localStorage.setItem("userKey", inputKey);
   
       statusEl.innerHTML = "<span style='color:#00ffcc; text-shadow:0 0 8px rgba(0,255,204,0.3);'>CONNECTING SERVER...</span>";
@@ -231,10 +236,15 @@ loginBtn.addEventListener("click", async () => {
       try {
         const keyRes  = await fetch(CONFIG.k + "?t=" + Date.now());
         const keyText = await keyRes.text();
+        const validKeys = keyText
+          .split("\n")
+          .map(k => k.trim())
+          .filter(k => k !== "");
 
-const validKeys = keyText
-  .split("\n")
-  .map(k => k.trim());
+        if (validKeys.includes(inputKey)) {
+ 
+ 
+ 
  
           statusEl.innerHTML = "<span style='color:#00ffcc;'>KEY VALIDATED! ✓</span>";
 
@@ -349,6 +359,9 @@ const validKeys = keyText
           loginBtn.disabled = telegramBtn.disabled = false;
         }
 
+      } catch {
+        statusEl.innerHTML = "<span style='color:#ff4444;'>SERVER ERROR!</span>";
+        loginBtn.disabled = telegramBtn.disabled = false;
       }
     });
 
