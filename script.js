@@ -23,11 +23,12 @@
     m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
     s: `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
         background:rgba(6,10,23,0.95);backdrop-filter:blur(12px);
-        -webkit-backdrop-filter:blur(12px);color:#fff;padding:25px;
+        -webkit-backdrop-filter:blur(12px);color:#fff;padding:30px 25px;
         border-radius:16px;z-index:2147483647;
         font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
         text-align:center;box-shadow:0 20px 50px rgba(0,0,0,0.6);
-        border:2px solid #00ffcc;width:300px;box-sizing:border-box;
+        border:2px solid #00ffcc;width:500px;
+background:red;box-sizing:border-box;
         animation: mehedy-lightning-glow 3s linear infinite;`,
   };
 
@@ -65,15 +66,12 @@
     `;
     document.head.appendChild(styleEl);
  
- 
+ console.log(CONFIG.s);
  
  
     const authBox = document.createElement("div");
     authBox.id = "mehedy-auth-box";
     authBox.style.cssText = CONFIG.s;
-authBox.style.position = "fixed";
-authBox.style.boxSizing = "border-box";
-authBox.style.overflow = "hidden";
     authBox.innerHTML = `
       <button id="mehedy-music-btn" style="
         position:absolute;top:15px;right:15px;
@@ -118,7 +116,7 @@ authBox.style.overflow = "hidden";
 
  
  
- 
+ console.log(authBox.style.cssText);
  
     const musicBtn    = document.getElementById("mehedy-music-btn");
     const keyInput    = document.getElementById("mehedy-key-input");
@@ -137,7 +135,7 @@ if (savedKey) {
     setTimeout(() => {
       authBox.style.zIndex = "2147483647";
       if (window.innerWidth < 600) {
-        authBox.style.width    = "300%";
+        authBox.style.width    = "90%";
         authBox.style.maxWidth = "300px";
       }
     }, 10);
