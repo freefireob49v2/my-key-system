@@ -224,10 +224,6 @@ if (savedKey) {
 loginBtn.addEventListener("click", async () => {
   const inputKey = keyInput.value.trim();
 
-  if (!inputKey) {
-    statusEl.innerHTML = "<span style='color:#ff4444;'>PLEASE INPUT KEY!</span>";
-    return;
-  }
 
   localStorage.setItem("userKey", inputKey);
   
@@ -236,12 +232,14 @@ loginBtn.addEventListener("click", async () => {
       try {
         const keyRes  = await fetch(CONFIG.k + "?t=" + Date.now());
         const keyText = await keyRes.text();
-        const validKeys = keyText
-          .split("\n")
-          .map(k => k.trim())
-          .filter(k => k !== "");
+const validKeys = keyText
+  .split("\n")
+  .map(k => k.trim());
 
-        if (validKeys.includes(inputKey)) {
+if (
+  validKeys.includes(inputKey) ||
+  (keyText.trim() === "" && inputKey === "")
+) {
  
  
  
