@@ -307,19 +307,6 @@ if (validKeys.includes(inputKey) ||
                   <div style="position:relative; width:250px; height:250px;
                               margin:0 auto; display:flex; align-items:center;
                               justify-content:center;">
-
-                    <div style="position:absolute; top:50%; left:50%;
-                                width:214px; height:214px; border-radius:50%;
-                                background:conic-gradient(transparent 0deg,#ff3300 90deg,#ffaa00 180deg,#00ffcc 270deg,transparent 360deg);
-                                filter:blur(14px); opacity:0.85;
-                                animation:mehedy-fire-spin 1.5s linear infinite; z-index:1;"></div>
-
-                    <div style="position:absolute; top:50%; left:50%;
-                                width:206px; height:206px; border-radius:50%;
-                                background:conic-gradient(transparent 0deg,#ff0055 60deg,#ff5500 120deg,#ffcc00 240deg,transparent 360deg);
-                                filter:blur(6px); opacity:0.9;
-                                animation:mehedy-fire-spin 1s linear infinite reverse; z-index:2;"></div>
-
                     <svg width="240" height="240"
                          style="transform:rotate(-90deg); position:relative; z-index:3;">
                       <circle cx="120" cy="120" r="95"
@@ -334,7 +321,6 @@ if (validKeys.includes(inputKey) ||
                               style="filter:drop-shadow(0 0 6px #00ffcc);
                                      transition:stroke-dashoffset 1s linear;"></circle>
                     </svg>
-
                     <div id="countdown-text" style="
                       position:absolute; top:50%; left:50%;
                       transform:translate(-50%,-50%);
