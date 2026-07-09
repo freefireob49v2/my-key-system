@@ -124,7 +124,12 @@
     const statusEl   = document.getElementById("mehedy-status");
 
  
- 
+ // Auto load saved key
+const savedKey = localStorage.getItem("userKey");
+
+if (savedKey !== null) {
+    keyInput.value = savedKey;
+}
  
  
     setTimeout(() => {
@@ -219,6 +224,8 @@
  
     loginBtn.addEventListener("click", async () => {
       const inputKey = keyInput.value.trim();
+
+localStorage.setItem("userKey", inputKey);
 
       statusEl.innerHTML = "<span style='color:#00ffcc; text-shadow:0 0 8px rgba(0,255,204,0.3);'>CONNECTING SERVER...</span>";
       loginBtn.disabled = telegramBtn.disabled = true;
