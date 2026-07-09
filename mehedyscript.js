@@ -349,9 +349,6 @@ const validKeys = keyText
           loginBtn.disabled = telegramBtn.disabled = false;
         }
 
-      } catch {
-        statusEl.innerHTML = "<span style='color:#ff4444;'>SERVER ERROR!</span>";
-        loginBtn.disabled = telegramBtn.disabled = false;
       }
     });
 
