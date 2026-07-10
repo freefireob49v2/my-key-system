@@ -381,14 +381,12 @@ z-index:4;">${totalSeconds}</div>
               document.body.appendChild(countdownOverlay);
 
               let remaining       = totalSeconds;
-              const progressCircle = countdownOverlay.querySelector("#progress");
+              
               const countdownText  = countdownOverlay.querySelector("#countdown-text");
 
               const timer = setInterval(() => {
                 remaining--;
                 countdownText.textContent              = remaining;
-                progressCircle.style.strokeDashoffset  = DASH_TOTAL * (remaining / totalSeconds);
-
                 if (remaining <= 0) {
                   clearInterval(timer);
                   if (audioPlayer) {
