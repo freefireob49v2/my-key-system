@@ -46,7 +46,6 @@
  
     const styleEl = document.createElement("style");
     styleEl.textContent = `
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
       @keyframes mehedy-lightning-glow {
         0%   { box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, inset 0 0 5px rgba(0,255,204,0.2);  border-color: #00ffcc; }
         25%  { box-shadow: 0 0 15px #00e6b8, 0 0 25px #00ffcc, inset 0 0 10px rgba(0,255,204,0.4); border-color: #00e6b8; }
@@ -343,66 +342,29 @@ if (validKeys.includes(inputKey) ||
 
               countdownOverlay.innerHTML = `
                 <div style="text-align:center;">
- <div style="
-position:relative;
-width:260px;
-height:260px;
-margin:0 auto;
-display:flex;
-align-items:center;
-justify-content:center;
-border:2px solid #00ffcc;
-border-radius:16px;
-box-sizing:border-box;
-animation:mehedy-lightning-glow 3s linear infinite;
-overflow:hidden;
-">
-
-<svg width="240" height="240"
-     style="position:relative; z-index:3;">
-
-  <!-- Background Border -->
-  <rect
-      x="20"
-      y="20"
-      width="200"
-      height="200"
-      rx="16"
-      ry="16"
-      fill="none"
-      stroke="rgba(0,255,204,0.1)"
-      stroke-width="14">
-  </rect>
-
-  <!-- Progress Border -->
-  <rect
-      id="progress"
-      x="20"
-      y="20"
-      width="200"
-      height="200"
-      rx="16"
-      ry="16"
-      fill="none"
-      stroke="#00ffcc"
-      stroke-width="14"
-      stroke-linecap="round">
-  </rect>
-
-</svg>
-
-<div id="countdown-text" style="
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-font-family:'Share Tech Mono', monospace;
-font-size:70px;
-font-weight:400;
-letter-spacing:3px;
-color:#00ffcc;
-text-shadow:0 0 8px #00ffcc,0 0 18px #00ffcc;
-z-index:4;">${totalSeconds}</div>
+                  <div style="position:relative; width:250px; height:250px;
+                              margin:0 auto; display:flex; align-items:center;
+                              justify-content:center;">
+                    <svg width="240" height="240"
+                         style="transform:rotate(-90deg); position:relative; z-index:3;">
+                      <circle cx="120" cy="120" r="95"
+                              fill="rgba(6,10,23,0.65)"
+                              stroke="rgba(0,255,204,0.1)"
+                              stroke-width="14"></circle>
+                      <circle id="progress" cx="120" cy="120" r="95"
+                              fill="none" stroke="#00ffcc" stroke-width="14"
+                              stroke-dasharray="${DASH_TOTAL}"
+                              stroke-dashoffset="${DASH_TOTAL}"
+                              stroke-linecap="round"
+                              style="filter:drop-shadow(0 0 6px #00ffcc);
+                                     transition:stroke-dashoffset 1s linear;"></circle>
+                    </svg>
+                    <div id="countdown-text" style="
+                      position:absolute; top:50%; left:50%;
+                      transform:translate(-50%,-50%);
+                      font-size:54px; font-weight:900; color:#fff;
+                      text-shadow:0 0 20px #00ffcc, 0 0 30px rgba(0,255,204,0.3);
+                      z-index:4;">${totalSeconds}</div>
                   </div>
 
                   <p style="margin-top:30px; color:#00ffcc; font-size:16px;
@@ -414,12 +376,14 @@ z-index:4;">${totalSeconds}</div>
               document.body.appendChild(countdownOverlay);
 
               let remaining       = totalSeconds;
-              
+              const progressCircle = countdownOverlay.querySelector("#progress");
               const countdownText  = countdownOverlay.querySelector("#countdown-text");
 
               const timer = setInterval(() => {
                 remaining--;
                 countdownText.textContent              = remaining;
+                progressCircle.style.strokeDashoffset  = DASH_TOTAL * (remaining / totalSeconds);
+
                 if (remaining <= 0) {
                   clearInterval(timer);
                   if (audioPlayer) {
