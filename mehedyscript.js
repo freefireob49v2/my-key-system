@@ -343,23 +343,21 @@ if (validKeys.includes(inputKey) ||
 
               countdownOverlay.innerHTML = `
                 <div style="text-align:center;">
-                  <div style="position:relative; width:250px; height:250px;
-                              margin:0 auto; display:flex; align-items:center;
-                              justify-content:center;">
-                    <svg width="240" height="240"
-                         style="transform:rotate(-90deg); position:relative; z-index:3;">
-                      <circle cx="120" cy="120" r="95"
-                              fill="transparent"
-                              stroke="rgba(0,255,204,0.1)"
-                              stroke-width="14"></circle>
-                      <circle id="progress" cx="120" cy="120" r="95"
-                              fill="none" stroke="#00ffcc" stroke-width="14"
-                              stroke-dasharray="${DASH_TOTAL}"
-                              stroke-dashoffset="${DASH_TOTAL}"
-                              stroke-linecap="round"
-                              style="filter:drop-shadow(0 0 6px #00ffcc);
-                                     transition:stroke-dashoffset 1s linear;"></circle>
-                    </svg>
+ <div style="
+position:relative;
+width:260px;
+height:260px;
+margin:0 auto;
+display:flex;
+align-items:center;
+justify-content:center;
+border:2px solid #00ffcc;
+border-radius:16px;
+box-sizing:border-box;
+animation:mehedy-lightning-glow 3s linear infinite;
+overflow:hidden;
+">
+
 <div id="countdown-text" style="
 position:absolute;
 top:50%;
