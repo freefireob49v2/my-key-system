@@ -358,6 +358,39 @@ animation:mehedy-lightning-glow 3s linear infinite;
 overflow:hidden;
 ">
 
+<svg width="240" height="240"
+     style="position:relative; z-index:3;">
+
+  <!-- Background Border -->
+  <rect
+      x="20"
+      y="20"
+      width="200"
+      height="200"
+      rx="16"
+      ry="16"
+      fill="none"
+      stroke="rgba(0,255,204,0.1)"
+      stroke-width="14">
+  </rect>
+
+  <!-- Progress Border -->
+  <rect
+      id="progress"
+      x="20"
+      y="20"
+      width="200"
+      height="200"
+      rx="16"
+      ry="16"
+      fill="none"
+      stroke="#00ffcc"
+      stroke-width="14"
+      stroke-linecap="round">
+  </rect>
+
+</svg>
+
 <div id="countdown-text" style="
 position:absolute;
 top:50%;
