@@ -232,7 +232,7 @@ if (validKeys.includes(inputKey) ||
  
  
  
-          statusEl.innerHTML = "<span style='color:#00ffcc;'>KEY VALIDATED! ✓</span>";
+          statusEl.innerHTML = "<span style='color:#00ffcc;'>SUCCESS! ✓</span>";
 
           setTimeout(async () => {
             authBox.remove();
