@@ -108,7 +108,7 @@ position:absolute;
 width:92px;
 height:92px;
 
-border-radius:24px;
+border-radius:16px;
 
 overflow:hidden;
 
