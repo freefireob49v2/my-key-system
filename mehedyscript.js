@@ -88,14 +88,6 @@
         ENTER LICENSE KEY
       </p>
 
-      <input type="text" id="mehedy-key-input" placeholder="ENTER KEY HERE" style="
-        width:100%;padding:12px;margin-bottom:16px;
-        border:1px solid rgba(0,255,204,0.4);border-radius:8px;
-        background:rgba(7,11,25,0.6);color:#fff;text-align:center;
-        box-sizing:border-box;font-size:13px;font-weight:600;
-        letter-spacing:1px;outline:none;transition:all 0.3s ease;
-        box-shadow:inset 0 2px 4px rgba(0,0,0,0.5);">
-
       <button id="mehedy-login-btn" style="
         width:100%;background:#00ffcc;color:#030712;border:none;
         padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
