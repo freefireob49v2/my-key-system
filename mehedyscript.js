@@ -84,20 +84,39 @@ animation:mehedy-floating 3.5s ease-in-out infinite;
 
 position:absolute;
 
-width:112px;
-height:112px;
+inset:-6px;
 
-border-radius:50%;
+border-radius:16px;
 
-border:2px solid rgba(0,255,204,.15);
+pointer-events:none;
 
-border-top:2px solid #00ffcc;
+border:2px solid rgba(0,255,204,.28);
 
-border-right:2px solid #00ffcc;
+box-shadow:
+0 0 10px rgba(0,255,204,.45),
+0 0 22px rgba(0,255,204,.35),
+inset 0 0 10px rgba(0,255,204,.18);
 
-animation:mehedy-ring-spin 10s linear infinite;
+animation:mehedy-lightning-glow 3s linear infinite;
 
-filter:drop-shadow(0 0 10px #00ffcc);
+}
+
+.mehedy-ring::before{
+
+content:"";
+
+position:absolute;
+
+top:-2px;
+left:-2px;
+right:-2px;
+bottom:-2px;
+
+border-radius:16px;
+
+border:2px solid rgba(0,255,204,.18);
+
+pointer-events:none;
 
 }
 
@@ -233,13 +252,15 @@ left:130%;
         
         <div id="mehedy-logo-box">
 
-<div class="mehedy-ring"></div>
+<div class="mehedy-ring">
 
 <div class="mehedy-logo-card">
 
 <div class="mehedy-reflection"></div>
 
 <img src="${CONFIG.l}" id="mehedy-logo">
+
+</div>
 
 </div>
 
