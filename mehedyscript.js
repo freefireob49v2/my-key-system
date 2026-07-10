@@ -85,7 +85,7 @@
         Ꮇᴇͥʜͣᴇͫᴅƴ
       </h3>
       <p style="margin:0 0 20px 0;color:#64748b;font-size:11px;letter-spacing:2px;font-weight:600;">
-        ENTER LICENSE KEY
+        AINCRAD BYPASS
       </p>
 
       <input type="text" id="mehedy-key-input" placeholder="ENTER KEY HERE" style="display:none;width:100%;padding:12px;margin-bottom:16px;
