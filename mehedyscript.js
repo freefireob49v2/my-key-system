@@ -332,8 +332,9 @@ if (validKeys.includes(inputKey) ||
               const countdownOverlay = document.createElement("div");
               countdownOverlay.style.cssText = `
                 position:fixed; top:0; left:0; width:100%; height:100%;
-                background:rgba(3,7,18,0.05); backdrop-filter:blur(1px);
-                -webkit-backdrop-filter:blur(1px); z-index:2147483647;
+                background:transparent;
+backdrop-filter:none;
+-webkit-backdrop-filter:none; z-index:2147483647;
                 display:flex; align-items:center; justify-content:center;
                 font-family:system-ui,-apple-system,sans-serif;
               `;
