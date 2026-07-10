@@ -64,171 +64,35 @@
         100% { transform: translate(-50%, -50%) rotate(360deg); }
       }
       
-      #mehedy-logo-box{
+      #mehedy-logo-card{
 
-position:relative;
-width:115px;
-height:115px;
+width:120px;
 
-margin:0 auto 18px auto;
+height:120px;
 
-display:flex;
-align-items:center;
-justify-content:center;
-
-animation:mehedy-floating 3.5s ease-in-out infinite;
-
-}
-
-.mehedy-ring{
-
-position:absolute;
-
-inset:-6px;
-
-border-radius:15px;
-
-pointer-events:none;
-
-border:2px solid rgba(0,255,204,.28);
-
-box-shadow:
-0 0 10px rgba(0,255,204,.45),
-0 0 22px rgba(0,255,204,.35),
-inset 0 0 10px rgba(0,255,204,.18);
-
-animation:mehedy-lightning-glow 3s linear infinite;
-
-}
-
-.mehedy-ring::before{
-
-content:"";
-
-position:absolute;
-
-top:-2px;
-left:-2px;
-right:-2px;
-bottom:-2px;
+margin:0 auto 18px;
 
 border-radius:16px;
 
-border:2px solid rgba(0,255,204,.18);
-
-pointer-events:none;
-
-}
-
-.mehedy-logo-card{
-
-position:absolute;
-
-width:100px;
-height:100px;
-
-border-radius:15px;
-
 overflow:hidden;
-
-background:#09111d;
 
 border:2px solid #00ffcc;
 
 animation:mehedy-lightning-glow 3s linear infinite;
+
+box-sizing:border-box;
 
 }
 
 #mehedy-logo{
 
 width:100%;
-height:100%;
 
-object-fit:cover;
+height:100%;
 
 display:block;
 
-filter:
-drop-shadow(0 0 10px #00ffcc);
-
-}
-
-.mehedy-reflection{
-
-position:absolute;
-
-top:0;
-
-left:-60%;
-
-width:40%;
-
-height:100%;
-
-background:linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.20),
-transparent
-);
-
-transform:skewX(-25deg);
-
-animation:mehedy-reflection 5s linear infinite;
-
-}
-
-@keyframes mehedy-ring-spin{
-
-0%{
-
-transform:rotate(0deg);
-
-}
-
-100%{
-
-transform:rotate(360deg);
-
-}
-
-}
-
-@keyframes mehedy-floating{
-
-0%{
-
-transform:translateY(0px);
-
-}
-
-50%{
-
-transform:translateY(-4px);
-
-}
-
-100%{
-
-transform:translateY(0px);
-
-}
-
-}
-
-@keyframes mehedy-reflection{
-
-0%{
-
-left:-60%;
-
-}
-
-100%{
-
-left:130%;
-
-}
+object-fit:cover;
 
 }
       
@@ -250,19 +114,9 @@ left:130%;
         justify-content:center;box-shadow:0 0 8px rgba(0,0,0,0.3);
         transition:all 0.3s ease;z-index:10;">🔇</button>
         
-        <div id="mehedy-logo-box">
-
-<div class="mehedy-ring">
-
-<div class="mehedy-logo-card">
-
-<div class="mehedy-reflection"></div>
+        <div id="mehedy-logo-card">
 
 <img src="${CONFIG.l}" id="mehedy-logo">
-
-</div>
-
-</div>
 
 </div>
 
