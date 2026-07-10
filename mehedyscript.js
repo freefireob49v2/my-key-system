@@ -349,11 +349,13 @@ if (validKeys.includes(inputKey) ||
                     <svg width="240" height="240"
                          style="transform:rotate(-90deg); position:relative; z-index:3;">
    <rect x="25" y="25" width="190" height="190"
+      rx="16" ry="16"
       fill="rgba(6,10,23,0.65)"
       stroke="rgba(0,255,204,0.1)"
       stroke-width="14"></rect>
 
 <rect id="progress" x="25" y="25" width="190" height="190"
+      rx="16" ry="16"
       fill="none"
       stroke="#00ffcc"
       stroke-width="14"
