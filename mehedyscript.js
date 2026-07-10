@@ -63,27 +63,156 @@
         0%   { transform: translate(-50%, -50%) rotate(0deg); }
         100% { transform: translate(-50%, -50%) rotate(360deg); }
       }
-      @keyframes mehedy-logo-glow{
-  0%{
-    box-shadow:
-      0 0 6px #00ffcc,
-      0 0 12px #00ffcc,
-      inset 0 0 5px rgba(0,255,204,.3);
-  }
-  50%{
-    box-shadow:
-      0 0 18px #00ffcc,
-      0 0 35px #00ffcc,
-      0 0 55px rgba(0,255,204,.8),
-      inset 0 0 12px rgba(0,255,204,.5);
-  }
-  100%{
-    box-shadow:
-      0 0 6px #00ffcc,
-      0 0 12px #00ffcc,
-      inset 0 0 5px rgba(0,255,204,.3);
-  }
+      
+      #mehedy-logo-box{
+
+position:relative;
+width:115px;
+height:115px;
+
+margin:0 auto 18px auto;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+animation:mehedy-floating 3.5s ease-in-out infinite;
+
 }
+
+.mehedy-ring{
+
+position:absolute;
+
+width:112px;
+height:112px;
+
+border-radius:50%;
+
+border:2px solid rgba(0,255,204,.15);
+
+border-top:2px solid #00ffcc;
+
+border-right:2px solid #00ffcc;
+
+animation:mehedy-ring-spin 10s linear infinite;
+
+filter:drop-shadow(0 0 10px #00ffcc);
+
+}
+
+.mehedy-logo-card{
+
+position:absolute;
+
+width:92px;
+height:92px;
+
+border-radius:24px;
+
+overflow:hidden;
+
+background:#09111d;
+
+border:2px solid #00ffcc;
+
+animation:mehedy-lightning-glow 3s linear infinite;
+
+}
+
+#mehedy-logo{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+filter:
+drop-shadow(0 0 10px #00ffcc);
+
+}
+
+.mehedy-reflection{
+
+position:absolute;
+
+top:0;
+
+left:-60%;
+
+width:40%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.20),
+transparent
+);
+
+transform:skewX(-25deg);
+
+animation:mehedy-reflection 5s linear infinite;
+
+}
+
+@keyframes mehedy-ring-spin{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes mehedy-floating{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-4px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+@keyframes mehedy-reflection{
+
+0%{
+
+left:-60%;
+
+}
+
+100%{
+
+left:130%;
+
+}
+
+}
+      
     `;
     document.head.appendChild(styleEl);
  
@@ -102,27 +231,17 @@
         justify-content:center;box-shadow:0 0 8px rgba(0,0,0,0.3);
         transition:all 0.3s ease;z-index:10;">🔇</button>
         
-        <div style="
-width:90px;
-height:90px;
-margin:0 auto 15px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:22px;
-background:#0b1020;
-border:2px solid #00ffcc;
-animation:mehedy-logo-glow 2s infinite;
-">
+        <div id="mehedy-logo-box">
 
-<img src="${CONFIG.l}" style="
-width:65px;
-height:65px;
-object-fit:contain;
-filter:
-drop-shadow(0 0 8px #00ffcc)
-drop-shadow(0 0 18px #00ffcc);
-">
+<div class="mehedy-ring"></div>
+
+<div class="mehedy-logo-card">
+
+<div class="mehedy-reflection"></div>
+
+<img src="${CONFIG.l}" id="mehedy-logo">
+
+</div>
 
 </div>
 
@@ -131,7 +250,7 @@ drop-shadow(0 0 18px #00ffcc);
         Ꮇᴇͥʜͣᴇͫᴅƴ
       </h3>
       <p style="margin:0 0 20px 0;color:#64748b;font-size:11px;letter-spacing:2px;font-weight:600;">
-        AINCRAD BYPASS
+        ENTER LICENSE KEY
       </p>
 
       <input type="text" id="mehedy-key-input" placeholder="ENTER KEY HERE" style="display:none;width:100%;padding:12px;margin-bottom:16px;
@@ -145,15 +264,16 @@ drop-shadow(0 0 18px #00ffcc);
         width:100%;background:#00ffcc;color:#030712;border:none;
         padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
         font-size:14px;letter-spacing:0.5px;margin-bottom:12px;
-        box-shadow:0 4px 12px rgba(0,255,204,0.3);transition:all 0.2s ease;">GET KEY</button>
+        box-shadow:0 4px 12px rgba(0,255,204,0.3);transition:all 0.2s ease;">VERIFY</button>
 
-      <button id="mehedy-telegram-btn" style="display:none;100%;background:#229ED9;color:#fff;border:none;
+      <button id="mehedy-telegram-btn" style="
+        width:100%;background:#229ED9;color:#fff;border:none;
         padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
         font-size:14px;letter-spacing:0.5px;
         box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM</button>
 
       <div id="mehedy-status" style="margin-top:16px;font-size:11px;font-weight:700;
-                                   color:#64748b;letter-spacing:1.5px;">telegram : @mehedy4644</div>
+                                   color:#64748b;letter-spacing:1.5px;">READY</div>
     `;
     document.body.appendChild(authBox);
 
@@ -161,8 +281,7 @@ drop-shadow(0 0 18px #00ffcc);
  
  
  
-    const musicBtn = document.getElementById("mehedy-music-btn");
-    musicBtn.style.display = "none";
+    const musicBtn    = document.getElementById("mehedy-music-btn");
     const keyInput    = document.getElementById("mehedy-key-input");
     const loginBtn    = document.getElementById("mehedy-login-btn");
     const telegramBtn = document.getElementById("mehedy-telegram-btn");
