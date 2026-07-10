@@ -86,7 +86,7 @@ position:absolute;
 
 inset:-6px;
 
-border-radius:16px;
+border-radius:15px;
 
 pointer-events:none;
 
@@ -124,10 +124,10 @@ pointer-events:none;
 
 position:absolute;
 
-width:92px;
-height:92px;
+width:100px;
+height:100px;
 
-border-radius:16px;
+border-radius:15px;
 
 overflow:hidden;
 
