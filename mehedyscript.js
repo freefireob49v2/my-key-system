@@ -21,6 +21,7 @@
     r: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/mehedy.txt",
     t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button.txt",
     m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
+    l: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/logo.png",
     s: `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
         background:rgba(6,10,23,0.95);backdrop-filter:blur(12px);
         -webkit-backdrop-filter:blur(12px);color:#fff;padding:30px 25px;
@@ -62,6 +63,27 @@
         0%   { transform: translate(-50%, -50%) rotate(0deg); }
         100% { transform: translate(-50%, -50%) rotate(360deg); }
       }
+      @keyframes mehedy-logo-glow{
+  0%{
+    box-shadow:
+      0 0 6px #00ffcc,
+      0 0 12px #00ffcc,
+      inset 0 0 5px rgba(0,255,204,.3);
+  }
+  50%{
+    box-shadow:
+      0 0 18px #00ffcc,
+      0 0 35px #00ffcc,
+      0 0 55px rgba(0,255,204,.8),
+      inset 0 0 12px rgba(0,255,204,.5);
+  }
+  100%{
+    box-shadow:
+      0 0 6px #00ffcc,
+      0 0 12px #00ffcc,
+      inset 0 0 5px rgba(0,255,204,.3);
+  }
+}
     `;
     document.head.appendChild(styleEl);
  
@@ -79,6 +101,30 @@
         cursor:pointer;font-size:14px;display:flex;align-items:center;
         justify-content:center;box-shadow:0 0 8px rgba(0,0,0,0.3);
         transition:all 0.3s ease;z-index:10;">🔇</button>
+        
+        <div style="
+width:90px;
+height:90px;
+margin:0 auto 15px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:22px;
+background:#0b1020;
+border:2px solid #00ffcc;
+animation:mehedy-logo-glow 2s infinite;
+">
+
+<img src="${CONFIG.l}" style="
+width:65px;
+height:65px;
+object-fit:contain;
+filter:
+drop-shadow(0 0 8px #00ffcc)
+drop-shadow(0 0 18px #00ffcc);
+">
+
+</div>
 
       <h3 style="margin:0 0 6px 0;color:#00ffcc;font-size:20px;letter-spacing:1.5px;
                  font-weight:800;text-shadow:0 0 12px rgba(0,255,204,0.5);">
