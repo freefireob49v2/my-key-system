@@ -332,9 +332,8 @@ if (validKeys.includes(inputKey) ||
               const countdownOverlay = document.createElement("div");
               countdownOverlay.style.cssText = `
                 position:fixed; top:0; left:0; width:100%; height:100%;
-                background:transparent;
-backdrop-filter:none;
--webkit-backdrop-filter:none; z-index:2147483647;
+                background:rgba(3,7,18,0.05); backdrop-filter:blur(1px);
+                -webkit-backdrop-filter:blur(1px); z-index:2147483647;
                 display:flex; align-items:center; justify-content:center;
                 font-family:system-ui,-apple-system,sans-serif;
               `;
@@ -350,7 +349,7 @@ backdrop-filter:none;
                     <svg width="240" height="240"
                          style="transform:rotate(-90deg); position:relative; z-index:3;">
                       <circle cx="120" cy="120" r="95"
-                              fill="rgba(6,10,23,0.65)"
+                              fill="transparent"
                               stroke="rgba(0,255,204,0.1)"
                               stroke-width="14"></circle>
                       <circle id="progress" cx="120" cy="120" r="95"
