@@ -72,7 +72,7 @@
     authBox.id = "mehedy-auth-box";
     authBox.style.cssText = CONFIG.s;
     authBox.innerHTML = `
-      <button id="mehedy-music-btn" style="
+      <button id="mehedy-music-btn" style="display:none;
         position:absolute;top:15px;right:15px;
         background:rgba(255,255,255,0.05);border:1px solid rgba(0,255,204,0.3);
         color:#ff4444;border-radius:50%;width:32px;height:32px;
