@@ -46,6 +46,7 @@
  
     const styleEl = document.createElement("style");
     styleEl.textContent = `
+    @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap');
       @keyframes mehedy-lightning-glow {
         0%   { box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, inset 0 0 5px rgba(0,255,204,0.2);  border-color: #00ffcc; }
         25%  { box-shadow: 0 0 15px #00e6b8, 0 0 25px #00ffcc, inset 0 0 10px rgba(0,255,204,0.4); border-color: #00e6b8; }
@@ -362,6 +363,7 @@ if (validKeys.includes(inputKey) ||
                     <div id="countdown-text" style="
                       position:absolute; top:50%; left:50%;
                       transform:translate(-50%,-50%);
+                      font-family:'Rajdhani',sans-serif;
                       font-size:54px; font-weight:900; color:#fff;
                       text-shadow:0 0 20px #00ffcc, 0 0 30px rgba(0,255,204,0.3);
                       z-index:4;">${totalSeconds}</div>
