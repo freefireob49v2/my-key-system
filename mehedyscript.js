@@ -339,7 +339,7 @@ if (validKeys.includes(inputKey) ||
               `;
 
               const totalSeconds  = Math.floor(Math.random() * 0) + 30;
-              const DASH_TOTAL    = 597;
+              const DASH_TOTAL    = 760;
 
               countdownOverlay.innerHTML = `
                 <div style="text-align:center;">
@@ -348,17 +348,20 @@ if (validKeys.includes(inputKey) ||
                               justify-content:center;">
                     <svg width="240" height="240"
                          style="transform:rotate(-90deg); position:relative; z-index:3;">
-                      <circle cx="120" cy="120" r="95"
-                              fill="rgba(6,10,23,0.65)"
-                              stroke="rgba(0,255,204,0.1)"
-                              stroke-width="14"></circle>
-                      <circle id="progress" cx="120" cy="120" r="95"
-                              fill="none" stroke="#00ffcc" stroke-width="14"
-                              stroke-dasharray="${DASH_TOTAL}"
-                              stroke-dashoffset="${DASH_TOTAL}"
-                              stroke-linecap="round"
-                              style="filter:drop-shadow(0 0 6px #00ffcc);
-                                     transition:stroke-dashoffset 1s linear;"></circle>
+   <rect x="25" y="25" width="190" height="190"
+      fill="rgba(6,10,23,0.65)"
+      stroke="rgba(0,255,204,0.1)"
+      stroke-width="14"></rect>
+
+<rect id="progress" x="25" y="25" width="190" height="190"
+      fill="none"
+      stroke="#00ffcc"
+      stroke-width="14"
+      stroke-dasharray="${DASH_TOTAL}"
+      stroke-dashoffset="${DASH_TOTAL}"
+      stroke-linecap="square"
+      style="filter:drop-shadow(0 0 6px #00ffcc);
+             transition:stroke-dashoffset 1s linear;"></rect>
                     </svg>
                     <div id="countdown-text" style="
                       position:absolute; top:50%; left:50%;
