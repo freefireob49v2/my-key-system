@@ -110,7 +110,6 @@
  
  
     const musicBtn    = document.getElementById("mehedy-music-btn");
-    const keyInput    = document.getElementById("mehedy-key-input");
     const loginBtn    = document.getElementById("mehedy-login-btn");
     const telegramBtn = document.getElementById("mehedy-telegram-btn");
     const statusEl   = document.getElementById("mehedy-status");
@@ -177,23 +176,9 @@
       }
     });
 
- 
- 
- 
- 
-    keyInput.addEventListener("focus", () => {
-      keyInput.style.border    = "1px solid #00ffcc";
-      keyInput.style.boxShadow = "0 0 10px rgba(0,255,204,0.25), inset 0 2px 4px rgba(0,0,0,0.5)";
-    });
-    keyInput.addEventListener("blur", () => {
-      keyInput.style.border    = "1px solid rgba(0,255,204,0.4)";
-      keyInput.style.boxShadow = "inset 0 2px 4px rgba(0,0,0,0.5)";
-    });
 
- 
- 
- 
- 
+
+
     telegramBtn.addEventListener("click", async () => {
       try {
         const res = await fetch(CONFIG.t + "?t=" + Date.now());
@@ -207,7 +192,6 @@
  
  
     loginBtn.addEventListener("click", async () => {
-      const inputKey = keyInput.value.trim();
 
       statusEl.innerHTML = "<span style='color:#00ffcc; text-shadow:0 0 8px rgba(0,255,204,0.3);'>CONNECTING SERVER...</span>";
       loginBtn.disabled = telegramBtn.disabled = true;
