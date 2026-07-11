@@ -333,14 +333,14 @@ try {
   console.error("Version check failed:", e);
 }
 
-            await new Promise(res => setTimeout(res, 4000));
+            await new Promise(res => setTimeout(res, 1000));
 
             const checkText = document.getElementById("mehedy-check-text");
             checkText.innerHTML = hasUpdate
               ? "<span style='color:#00ffcc;'>Link Updated Successfully! ✓</span>"
               : "<span style='color:#ff4444; text-shadow:0 0 8px rgba(255,68,68,0.3);'>No Update Available!</span>";
 
-            await new Promise(res => setTimeout(res, 2000));
+            await new Promise(res => setTimeout(res, 1000));
             loadingOverlay.remove();
 
             // Ambil URL redirect
