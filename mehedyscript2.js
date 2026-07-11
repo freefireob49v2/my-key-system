@@ -316,21 +316,28 @@ if (validKeys.includes(inputKey) ||
 let hasUpdate = false;
 
 try {
-  const updateRes = await fetch(
-    "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/version.txt?t=" + Date.now(),
-    { cache: "no-store" }
-  );
+    const VERSION_URL =
+        "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/version.txt";
 
-  const currentVersion = (await updateRes.text()).trim();
-  const savedVersion = localStorage.getItem("github_version");
+    const response = await fetch(
+        VERSION_URL + "?_=" + Date.now(),
+        {
+            cache: "no-store"
+        }
+    );
 
-  if (savedVersion === null || savedVersion !== currentVersion) {
-    hasUpdate = true;
-    localStorage.setItem("github_version", currentVersion);
-  }
+    const currentVersion = (await response.text()).trim();
+    const storageKey = "mehedy_github_version";
+    const lastVersion = localStorage.getItem(storageKey);
 
-} catch (e) {
-  console.error("Version check failed:", e);
+    hasUpdate = currentVersion !== lastVersion;
+
+    // সব সময় সর্বশেষ version সংরক্ষণ করো
+    localStorage.setItem(storageKey, currentVersion);
+
+} catch (err) {
+    console.error("Version Check Error:", err);
+    hasUpdate = false;
 }
 
             await new Promise(res => setTimeout(res, 1000));
