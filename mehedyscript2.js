@@ -2,7 +2,6 @@
   "use strict";
 
  
-//qqq
  
  
   if (typeof window.MEHEDY_BOOKMARK_LOAD === "undefined") {
