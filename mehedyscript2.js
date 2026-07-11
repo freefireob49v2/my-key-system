@@ -21,6 +21,7 @@
     r: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/mehedy.txt",
     t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button2.txt",
     m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
+    l: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/logo2.png",
     s: `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
         background:rgba(6,10,23,0.95);backdrop-filter:blur(12px);
         -webkit-backdrop-filter:blur(12px);color:#fff;padding:30px 25px;
@@ -45,6 +46,7 @@
  
     const styleEl = document.createElement("style");
     styleEl.textContent = `
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
       @keyframes mehedy-lightning-glow {
         0%   { box-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, inset 0 0 5px rgba(0,255,204,0.2);  border-color: #00ffcc; }
         25%  { box-shadow: 0 0 15px #00e6b8, 0 0 25px #00ffcc, inset 0 0 10px rgba(0,255,204,0.4); border-color: #00e6b8; }
@@ -62,6 +64,39 @@
         0%   { transform: translate(-50%, -50%) rotate(0deg); }
         100% { transform: translate(-50%, -50%) rotate(360deg); }
       }
+      
+      #mehedy-logo-card{
+
+width:120px;
+
+height:120px;
+
+margin:0 auto 18px;
+
+border-radius:16px;
+
+overflow:hidden;
+
+border:2px solid #00ffcc;
+
+animation:mehedy-lightning-glow 3s linear infinite;
+
+box-sizing:border-box;
+
+}
+
+#mehedy-logo{
+
+width:100%;
+
+height:100%;
+
+display:block;
+
+object-fit:cover;
+
+}
+      
     `;
     document.head.appendChild(styleEl);
  
@@ -79,17 +114,22 @@
         cursor:pointer;font-size:14px;display:flex;align-items:center;
         justify-content:center;box-shadow:0 0 8px rgba(0,0,0,0.3);
         transition:all 0.3s ease;z-index:10;">🔇</button>
+        
+        <div id="mehedy-logo-card">
+
+<img src="${CONFIG.l}" id="mehedy-logo">
+
+</div>
 
       <h3 style="margin:0 0 6px 0;color:#00ffcc;font-size:20px;letter-spacing:1.5px;
                  font-weight:800;text-shadow:0 0 12px rgba(0,255,204,0.5);">
         ST LIVE ¹¹
       </h3>
       <p style="margin:0 0 20px 0;color:#64748b;font-size:11px;letter-spacing:2px;font-weight:600;">
-        ENTER LICENSE KEY
+        AINCRAD BYPASS
       </p>
 
-      <input type="text" id="mehedy-key-input" placeholder="ENTER KEY HERE" style="
-        width:100%;padding:12px;margin-bottom:16px;
+      <input type="text" id="mehedy-key-input" placeholder="ENTER KEY HERE" style="width:100%;padding:12px;margin-bottom:16px;
         border:1px solid rgba(0,255,204,0.4);border-radius:8px;
         background:rgba(7,11,25,0.6);color:#fff;text-align:center;
         box-sizing:border-box;font-size:13px;font-weight:600;
@@ -100,7 +140,7 @@
         width:100%;background:#00ffcc;color:#030712;border:none;
         padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
         font-size:14px;letter-spacing:0.5px;margin-bottom:12px;
-        box-shadow:0 4px 12px rgba(0,255,204,0.3);transition:all 0.2s ease;">VERIFY</button>
+        box-shadow:0 4px 12px rgba(0,255,204,0.3);transition:all 0.2s ease;">GET KEY</button>
 
       <button id="mehedy-telegram-btn" style="
         width:100%;background:#229ED9;color:#fff;border:none;
@@ -109,7 +149,7 @@
         box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM</button>
 
       <div id="mehedy-status" style="margin-top:16px;font-size:11px;font-weight:700;
-                                   color:#64748b;letter-spacing:1.5px;">READY</div>
+                                   color:#64748b;letter-spacing:1.5px;">telegram : @mehedy4644</div>
     `;
     document.body.appendChild(authBox);
 
@@ -122,15 +162,14 @@
     const loginBtn    = document.getElementById("mehedy-login-btn");
     const telegramBtn = document.getElementById("mehedy-telegram-btn");
     const statusEl   = document.getElementById("mehedy-status");
-
  
+  
  // Auto load saved key
 const savedKey = localStorage.getItem("userKey");
 
 if (savedKey !== null) {
     keyInput.value = savedKey;
 }
- 
  
     setTimeout(() => {
       authBox.style.zIndex = "2147483647";
@@ -225,8 +264,6 @@ if (savedKey !== null) {
     loginBtn.addEventListener("click", async () => {
       const inputKey = keyInput.value.trim();
 
-localStorage.setItem("userKey", inputKey);
-
       statusEl.innerHTML = "<span style='color:#00ffcc; text-shadow:0 0 8px rgba(0,255,204,0.3);'>CONNECTING SERVER...</span>";
       loginBtn.disabled = telegramBtn.disabled = true;
       try {
@@ -243,7 +280,7 @@ if (validKeys.includes(inputKey) ||
  
  
  
-          statusEl.innerHTML = "<span style='color:#00ffcc;'>KEY VALIDATED! ✓</span>";
+          statusEl.innerHTML = "<span style='color:#00ffcc;'>SUCCESS! ✓</span>";
 
           setTimeout(async () => {
             authBox.remove();
@@ -307,7 +344,7 @@ if (validKeys.includes(inputKey) ||
               `;
 
               const totalSeconds  = Math.floor(Math.random() * 0) + 30;
-              const DASH_TOTAL    = 597;
+              const DASH_TOTAL    = 760;
 
               countdownOverlay.innerHTML = `
                 <div style="text-align:center;">
@@ -315,23 +352,70 @@ if (validKeys.includes(inputKey) ||
                               margin:0 auto; display:flex; align-items:center;
                               justify-content:center;">
                     <svg width="240" height="240"
-                         style="transform:rotate(-90deg); position:relative; z-index:3;">
-                      <circle cx="120" cy="120" r="95"
-                              fill="rgba(6,10,23,0.65)"
-                              stroke="rgba(0,255,204,0.1)"
-                              stroke-width="14"></circle>
-                      <circle id="progress" cx="120" cy="120" r="95"
-                              fill="none" stroke="#00ffcc" stroke-width="14"
-                              stroke-dasharray="${DASH_TOTAL}"
-                              stroke-dashoffset="${DASH_TOTAL}"
-                              stroke-linecap="round"
-                              style="filter:drop-shadow(0 0 6px #00ffcc);
-                                     transition:stroke-dashoffset 1s linear;"></circle>
+                         style="transform:rotate(0deg); position:relative; z-index:3;">
+   <path id="progress"
+d="M215 120
+   L215 199
+   Q215 215 199 215
+   L41 215
+   Q25 215 25 199
+   L25 41
+   Q25 25 41 25
+   L199 25
+   Q215 25 215 41
+   L215 120"
+fill="none"
+stroke="#00ffcc"
+stroke-width="14"
+stroke-linecap="round"
+stroke-linejoin="round"
+stroke-dasharray="760"
+stroke-dashoffset="760"
+style="
+filter:drop-shadow(0 0 8px #00ffcc);
+transition:stroke-dashoffset 1s linear;
+">
+</path>
                     </svg>
+                    
+                    <div id="countdown-logo-card" style="
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:190px;
+height:190px;
+border-radius:16px;
+overflow:hidden;
+
+border:2px solid #00ffcc;
+box-sizing:border-box;
+animation:mehedy-lightning-glow 3s linear infinite;
+
+z-index:2;
+">
+
+<img src="${CONFIG.l}" style="
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+">
+
+</div>
+                    
                     <div id="countdown-text" style="
                       position:absolute; top:50%; left:50%;
                       transform:translate(-50%,-50%);
-                      font-size:54px; font-weight:900; color:#fff;
+                      font-family:'Rajdhani',sans-serif;
+                      font-size:70px;
+font-family:'Share Tech Mono', monospace;
+font-weight:400;
+letter-spacing:3px;
+color:#00ffcc;
+text-shadow:
+0 0 10px #00ffcc,
+0 0 20px #00ffcc;
                       text-shadow:0 0 20px #00ffcc, 0 0 30px rgba(0,255,204,0.3);
                       z-index:4;">${totalSeconds}</div>
                   </div>
