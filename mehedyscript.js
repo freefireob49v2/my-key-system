@@ -322,11 +322,23 @@ try {
     const currentVersion = (await response.text()).trim();
     const storageKey = "mehedy_github_version";
     const lastVersion = localStorage.getItem(storageKey);
+    
+console.log("Current:", currentVersion);
+console.log("Saved:", lastVersion);
+console.log("Equal:", currentVersion === lastVersion);
+console.log("HasUpdate:", hasUpdate);
 
-    hasUpdate = currentVersion !== lastVersion;
+    // ডিবাগ (সাময়িক)
+    document.getElementById("mehedy-check-text").innerHTML =
+        `<div style="font-size:11px;color:#00ffcc">
+        Current: ${currentVersion}<br>
+        Saved: ${lastVersion || "NULL"}
+        </div>`;
 
-    // সব সময় সর্বশেষ version সংরক্ষণ করো
-    localStorage.setItem(storageKey, currentVersion);
+    if (!lastVersion || lastVersion !== currentVersion) {
+        hasUpdate = true;
+        localStorage.setItem(storageKey, currentVersion);
+    }
 
 } catch (err) {
     console.error("Version Check Error:", err);
