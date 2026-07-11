@@ -339,7 +339,6 @@ try {
     console.error("Version Check Error:", err);
     hasUpdate = false;
 }
-
             await new Promise(res => setTimeout(res, 1000));
 
             const checkText = document.getElementById("mehedy-check-text");
