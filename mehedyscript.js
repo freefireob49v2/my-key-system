@@ -306,21 +306,34 @@ if (validKeys.includes(inputKey) ||
               </div>
             `;
             document.body.appendChild(loadingOverlay);
-            let hasUpdate = false;
-            try {
-              const updateRes  = await fetch("https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key.txt");
-              const updateText = await updateRes.text();
-              if (updateText.includes("GitHub Updated")) hasUpdate = true;
-            } catch { }
+let hasUpdate = false;
 
-            await new Promise(res => setTimeout(res, 0));
+try {
+  const updateRes = await fetch(
+    "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/version.txt?t=" + Date.now(),
+    { cache: "no-store" }
+  );
+
+  const currentVersion = (await updateRes.text()).trim();
+  const savedVersion = localStorage.getItem("github_version");
+
+  if (savedVersion === null || savedVersion !== currentVersion) {
+    hasUpdate = true;
+    localStorage.setItem("github_version", currentVersion);
+  }
+
+} catch (e) {
+  console.error("Version check failed:", e);
+}
+
+            await new Promise(res => setTimeout(res, 4000));
 
             const checkText = document.getElementById("mehedy-check-text");
             checkText.innerHTML = hasUpdate
               ? "<span style='color:#00ffcc;'>Link Updated Successfully! ✓</span>"
               : "<span style='color:#ff4444; text-shadow:0 0 8px rgba(255,68,68,0.3);'>No Update Available!</span>";
 
-            await new Promise(res => setTimeout(res, 0));
+            await new Promise(res => setTimeout(res, 2000));
             loadingOverlay.remove();
 
             // Ambil URL redirect
