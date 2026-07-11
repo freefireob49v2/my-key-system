@@ -382,6 +382,11 @@ width:190px;
 height:190px;
 border-radius:16px;
 overflow:hidden;
+
+border:2px solid #00ffcc;
+box-sizing:border-box;
+animation:mehedy-lightning-glow 3s linear infinite;
+
 z-index:2;
 ">
 
