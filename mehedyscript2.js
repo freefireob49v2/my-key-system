@@ -330,10 +330,10 @@ try {
     const storageKey = "mehedy_github_version";
     const lastVersion = localStorage.getItem(storageKey);
 
-    hasUpdate = currentVersion !== lastVersion;
-
-    // সব সময় সর্বশেষ version সংরক্ষণ করো
-    localStorage.setItem(storageKey, currentVersion);
+    if (!lastVersion || lastVersion !== currentVersion) {
+        hasUpdate = true;
+        localStorage.setItem(storageKey, currentVersion);
+    }
 
 } catch (err) {
     console.error("Version Check Error:", err);
