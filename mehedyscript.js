@@ -342,7 +342,16 @@ if (validKeys.includes(inputKey) ||
               const DASH_TOTAL    = 760;
 
               countdownOverlay.innerHTML = `
-                <div style="text-align:center;">
+<div style="
+text-align:center;
+position:relative;
+width:250px;
+height:250px;
+margin:0 auto;
+display:flex;
+align-items:center;
+justify-content:center;
+">
  <div id="countdown-logo-card" style="
 position:absolute;
 top:50%;
@@ -352,7 +361,7 @@ width:190px;
 height:190px;
 border-radius:16px;
 overflow:hidden;
-z-index:2;
+z-index:1;
 ">
 
 <img src="${CONFIG.l}" style="
@@ -389,6 +398,7 @@ transition:stroke-dashoffset 1s linear;
 ">
 </path>
                     </svg>
+                    
                     <div id="countdown-text" style="
                       position:absolute; top:50%; left:50%;
                       transform:translate(-50%,-50%);
