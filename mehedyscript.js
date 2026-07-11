@@ -322,18 +322,6 @@ try {
     const currentVersion = (await response.text()).trim();
     const storageKey = "mehedy_github_version";
     const lastVersion = localStorage.getItem(storageKey);
-    
-console.log("Current:", currentVersion);
-console.log("Saved:", lastVersion);
-console.log("Equal:", currentVersion === lastVersion);
-console.log("HasUpdate:", hasUpdate);
-
-    // ডিবাগ (সাময়িক)
-    document.getElementById("mehedy-check-text").innerHTML =
-        `<div style="font-size:11px;color:#00ffcc">
-        Current: ${currentVersion}<br>
-        Saved: ${lastVersion || "NULL"}
-        </div>`;
 
     if (!lastVersion || lastVersion !== currentVersion) {
         hasUpdate = true;
