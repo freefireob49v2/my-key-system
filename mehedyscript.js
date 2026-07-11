@@ -348,22 +348,29 @@ if (validKeys.includes(inputKey) ||
                               justify-content:center;">
                     <svg width="240" height="240"
                          style="transform:rotate(0deg); position:relative; z-index:3;">
-   <rect x="25" y="25" width="190" height="190"
-      rx="16" ry="16"
-      fill="rgba(6,10,23,0.65)"
-      stroke="rgba(0,255,204,0.1)"
-      stroke-width="14"></rect>
-
-<rect id="progress" x="25" y="25" width="190" height="190"
-      rx="16" ry="16"
-      fill="none"
-      stroke="#00ffcc"
-      stroke-width="14"
-      stroke-dasharray="${DASH_TOTAL}"
-      stroke-dashoffset="${DASH_TOTAL}"
-      stroke-linecap="square"
-      style="filter:drop-shadow(0 0 6px #00ffcc);
-             transition:stroke-dashoffset 1s linear;"></rect>
+   <path id="progress"
+d="M215 120
+   L215 199
+   Q215 215 199 215
+   L41 215
+   Q25 215 25 199
+   L25 41
+   Q25 25 41 25
+   L199 25
+   Q215 25 215 41
+   L215 120"
+fill="none"
+stroke="#00ffcc"
+stroke-width="14"
+stroke-linecap="round"
+stroke-linejoin="round"
+stroke-dasharray="760"
+stroke-dashoffset="760"
+style="
+filter:drop-shadow(0 0 8px #00ffcc);
+transition:stroke-dashoffset 1s linear;
+">
+</path>
                     </svg>
                     <div id="countdown-text" style="
                       position:absolute; top:50%; left:50%;
