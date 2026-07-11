@@ -343,9 +343,26 @@ if (validKeys.includes(inputKey) ||
 
               countdownOverlay.innerHTML = `
                 <div style="text-align:center;">
-                  <div style="position:relative; width:250px; height:250px;
-                              margin:0 auto; display:flex; align-items:center;
-                              justify-content:center;">
+ <div id="countdown-logo-card" style="
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:190px;
+height:190px;
+border-radius:16px;
+overflow:hidden;
+z-index:2;
+">
+
+<img src="${CONFIG.l}" style="
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+">
+
+</div>
                     <svg width="240" height="240"
                          style="transform:rotate(0deg); position:relative; z-index:3;">
    <path id="progress"
@@ -385,7 +402,7 @@ text-shadow:
 0 0 10px #00ffcc,
 0 0 20px #00ffcc;
                       text-shadow:0 0 20px #00ffcc, 0 0 30px rgba(0,255,204,0.3);
-                      z-index:4;">${totalSeconds}</div>
+                      z-index:5;">${totalSeconds}</div>
                   </div>
 
                   <p style="margin-top:30px; color:#00ffcc; font-size:16px;
