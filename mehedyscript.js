@@ -347,7 +347,7 @@ if (validKeys.includes(inputKey) ||
                               margin:0 auto; display:flex; align-items:center;
                               justify-content:center;">
                     <svg width="240" height="240"
-                         style="transform:rotate(-90deg); position:relative; z-index:3;">
+                         style="transform:rotate(0deg); position:relative; z-index:3;">
    <rect x="25" y="25" width="190" height="190"
       rx="16" ry="16"
       fill="rgba(6,10,23,0.65)"
