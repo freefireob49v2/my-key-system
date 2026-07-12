@@ -123,7 +123,7 @@ object-fit:cover;
 
       <h3 style="margin:0 0 6px 0;color:#00ffcc;font-size:20px;letter-spacing:1.5px;
                  font-weight:800;text-shadow:0 0 12px rgba(0,255,204,0.5);">
-        ST LIVE ¹¹
+        Ꮇᴇͥʜͣᴇͫᴅƴ
       </h3>
       <p style="margin:0 0 20px 0;color:#64748b;font-size:11px;letter-spacing:2px;font-weight:600;">
         AINCRAD BYPASS
@@ -146,7 +146,7 @@ object-fit:cover;
         width:100%;background:#229ED9;color:#fff;border:none;
         padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
         font-size:14px;letter-spacing:0.5px;
-        box-shadow:0 4px 12px rgba(34,158,217,0.25);">JOIN❗𝐒𝐓 𝐋𝐈𝐕𝐄¹¹ 𝐎𝐅𝐂 ❗</button>
+        box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM</button>
 
       <div id="mehedy-status" style="margin-top:16px;font-size:11px;font-weight:700;
                                    color:#64748b;letter-spacing:1.5px;">Made with tg : @mehedy4644</div>
