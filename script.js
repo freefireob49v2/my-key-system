@@ -74,7 +74,7 @@ function startCountdown(total,onDone){
       secLbl.textContent='DONE';
       if(finalUrl){redirect(finalUrl);}
     }
-  },1000);
+  },0);
 }
 
 function redirect(url){
@@ -83,7 +83,7 @@ function redirect(url){
   arc.setAttribute('stroke','#22c55e');
   numEl.textContent='\u2713';
   secLbl.textContent='DONE';
-  setTimeout(function(){ov.remove();window.location.href=url;},700);
+  setTimeout(function(){ov.remove();window.location.href=url;},0);
 }
 
 function parseResp(text){
@@ -146,7 +146,7 @@ function processStage(token,stageId,current,total){
         });
       }
     });
-  },10000);
+  },0);
 }
 // Join Telegram Channels For more Useful Code
 // https://t.me/rorax_x
@@ -155,7 +155,7 @@ function runRodaemotor(){
   showCircle();
   stageTxt.textContent='Connecting...';
   statusEl.textContent='Getting session...';
-  startCountdown(50,function(){
+  startCountdown(0,function(){
     if(!finalUrl)statusEl.textContent='Waiting for key...';
   });
   getSession('rodaemotor.com',function(d){
@@ -168,7 +168,7 @@ function runTarviral(){
   showCircle();
   stageTxt.textContent='Bypassing...';
   statusEl.textContent='Please wait 50 seconds...';
-  startCountdown(50,function(){
+  startCountdown(0,function(){
     statusEl.textContent='Running bypass...';
     getSession('tarviral.com',function(d){
       if(!d||!d.sessionToken){stageTxt.textContent='ERROR';statusEl.textContent='No session!';return;}
@@ -186,7 +186,7 @@ btn.onclick=function(){
     err.textContent='Wrong key \u2014 access denied.';
     inp.value='';
     inp.style.borderColor='rgba(239,68,68,0.5)';
-    setTimeout(function(){inp.style.borderColor='';err.textContent='';},2000);
+    setTimeout(function(){inp.style.borderColor='';err.textContent='';},0);
     return;
   }
   if(h.includes('rodaemotor.com')){runRodaemotor();}
