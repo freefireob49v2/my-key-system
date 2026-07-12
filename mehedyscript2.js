@@ -149,7 +149,7 @@ object-fit:cover;
         box-shadow:0 4px 12px rgba(34,158,217,0.25);">JOIN❗𝐒𝐓 𝐋𝐈𝐕𝐄¹¹ 𝐎𝐅𝐂 ❗</button>
 
       <div id="mehedy-status" style="margin-top:16px;font-size:11px;font-weight:700;
-                                   color:#64748b;letter-spacing:1.5px;">Made with tg : @mehedy4644</div>
+                                   color:#64748b;letter-spacing:1.5px;">@HACKERSTLIVE11</div>
     `;
     document.body.appendChild(authBox);
 
