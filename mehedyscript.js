@@ -18,10 +18,10 @@
  
   const CONFIG = {
     k: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key.txt",
-    r: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/shauryatripathi2009-cpu/main/mehedy.txt",
-    t: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/button.txt",
-    m: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/music.mp3",
-    l: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/logo.png",
+    r: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/mehedy.txt",
+    t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button.txt",
+    m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
+    l: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/logo.png",
     s: `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
         background:rgba(6,10,23,0.95);backdrop-filter:blur(12px);
         -webkit-backdrop-filter:blur(12px);color:#fff;padding:30px 25px;
@@ -123,13 +123,13 @@ object-fit:cover;
 
       <h3 style="margin:0 0 6px 0;color:#00ffcc;font-size:20px;letter-spacing:1.5px;
                  font-weight:800;text-shadow:0 0 12px rgba(0,255,204,0.5);">
-        Ꮇᴇͥʜͣᴇͫᴅƴ
+        ST LIVE ¹¹
       </h3>
       <p style="margin:0 0 20px 0;color:#64748b;font-size:11px;letter-spacing:2px;font-weight:600;">
         AINCRAD BYPASS
       </p>
 
-      <input type="text" id="mehedy-key-input" placeholder="ENTER KEY HERE" style="display:none;width:100%;padding:12px;margin-bottom:16px;
+      <input type="text" id="mehedy-key-input" placeholder="ENTER KEY HERE" style="width:100%;padding:12px;margin-bottom:16px;
         border:1px solid rgba(0,255,204,0.4);border-radius:8px;
         background:rgba(7,11,25,0.6);color:#fff;text-align:center;
         box-sizing:border-box;font-size:13px;font-weight:600;
@@ -143,14 +143,13 @@ object-fit:cover;
         box-shadow:0 4px 12px rgba(0,255,204,0.3);transition:all 0.2s ease;">GET KEY</button>
 
       <button id="mehedy-telegram-btn" style="
-    display:none;
         width:100%;background:#229ED9;color:#fff;border:none;
         padding:12px;border-radius:8px;font-weight:700;cursor:pointer;
         font-size:14px;letter-spacing:0.5px;
-        box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM</button>
+        box-shadow:0 4px 12px rgba(34,158,217,0.25);">JOIN❗𝐒𝐓 𝐋𝐈𝐕𝐄¹¹ 𝐎𝐅𝐂 ❗</button>
 
       <div id="mehedy-status" style="margin-top:16px;font-size:11px;font-weight:700;
-                                   color:#64748b;letter-spacing:1.5px;">telegram : @mehedy4644</div>
+                                   color:#64748b;letter-spacing:1.5px;">Made with tg : @mehedy4644</div>
     `;
     document.body.appendChild(authBox);
 
@@ -159,12 +158,18 @@ object-fit:cover;
  
  
     const musicBtn    = document.getElementById("mehedy-music-btn");
-    musicBtn.style.display = "none";
     const keyInput    = document.getElementById("mehedy-key-input");
     const loginBtn    = document.getElementById("mehedy-login-btn");
     const telegramBtn = document.getElementById("mehedy-telegram-btn");
     const statusEl   = document.getElementById("mehedy-status");
  
+  
+ // Auto load saved key
+const savedKey = localStorage.getItem("userKey");
+
+if (savedKey !== null) {
+    keyInput.value = savedKey;
+}
  
     setTimeout(() => {
       authBox.style.zIndex = "2147483647";
@@ -178,7 +183,7 @@ object-fit:cover;
  
  
  
-    const FALLBACK_MUSIC_URL = "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/music.mp3";
+    const FALLBACK_MUSIC_URL = "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3";
     let musicLoading = false;
     musicBtn.addEventListener("click", async () => {
       if (musicLoading) return;
@@ -258,6 +263,8 @@ object-fit:cover;
  
     loginBtn.addEventListener("click", async () => {
       const inputKey = keyInput.value.trim();
+
+localStorage.setItem("userKey", inputKey);
 
       statusEl.innerHTML = "<span style='color:#00ffcc; text-shadow:0 0 8px rgba(0,255,204,0.3);'>CONNECTING SERVER...</span>";
       loginBtn.disabled = telegramBtn.disabled = true;
