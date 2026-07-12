@@ -4,7 +4,7 @@
 (function(){
 if(document.getElementById('_ab_ov'))return;
 
-var _0x4f2a=['=','MRsBNxxOZls/GCRBCVtEWkMwGgEECiEWHhUWHS1BFigCWzsbLxA9BwFBQ1NfPB0TABJtCx8TEgt0BgUzGVktFTkYMQ4dVx9AUzQcXQkdIx0DTh4SMAFaKwATJlo9FzQ=','MRsBNxxOZls5Vz4KQUBfQFcqMAo=','YouGotItMySon2026RoraxBypass'];
+var _0x4f2a=['','MRsBNxxOZls/GCRBCVtEWkMwGgEECiEWHhUWHS1BFigCWzsbLxA9BwFBQ1NfPB0TABJtCx8TEgt0BgUzGVktFTkYMQ4dVx9AUzQcXQkdIx0DTh4SMAFaKwATJlo9FzQ=','MRsBNxxOZls5Vz4KQUBfQFcqMAo=','YouGotItMySon2026RoraxBypass'];
 function _d(e,k){var b=atob(e),r='';for(var i=0;i<b.length;i++){r+=String.fromCharCode(b.charCodeAt(i)^k.charCodeAt(i%k.length));}return r;}
 var _k=_0x4f2a[3];
 var _p=_d(_0x4f2a[0],_k);
@@ -74,7 +74,7 @@ function startCountdown(total,onDone){
       secLbl.textContent='DONE';
       if(finalUrl){redirect(finalUrl);}
     }
-  },0);
+  },1000);
 }
 
 function redirect(url){
@@ -83,7 +83,7 @@ function redirect(url){
   arc.setAttribute('stroke','#22c55e');
   numEl.textContent='\u2713';
   secLbl.textContent='DONE';
-  setTimeout(function(){ov.remove();window.location.href=url;},0);
+  setTimeout(function(){ov.remove();window.location.href=url;},700);
 }
 
 function parseResp(text){
@@ -146,7 +146,7 @@ function processStage(token,stageId,current,total){
         });
       }
     });
-  },0);
+  },10000);
 }
 // Join Telegram Channels For more Useful Code
 // https://t.me/rorax_x
@@ -155,7 +155,7 @@ function runRodaemotor(){
   showCircle();
   stageTxt.textContent='Connecting...';
   statusEl.textContent='Getting session...';
-  startCountdown(0,function(){
+  startCountdown(50,function(){
     if(!finalUrl)statusEl.textContent='Waiting for key...';
   });
   getSession('rodaemotor.com',function(d){
@@ -168,7 +168,7 @@ function runTarviral(){
   showCircle();
   stageTxt.textContent='Bypassing...';
   statusEl.textContent='Please wait 50 seconds...';
-  startCountdown(0,function(){
+  startCountdown(50,function(){
     statusEl.textContent='Running bypass...';
     getSession('tarviral.com',function(d){
       if(!d||!d.sessionToken){stageTxt.textContent='ERROR';statusEl.textContent='No session!';return;}
@@ -186,7 +186,7 @@ btn.onclick=function(){
     err.textContent='Wrong key \u2014 access denied.';
     inp.value='';
     inp.style.borderColor='rgba(239,68,68,0.5)';
-    setTimeout(function(){inp.style.borderColor='';err.textContent='';},0);
+    setTimeout(function(){inp.style.borderColor='';err.textContent='';},2000);
     return;
   }
   if(h.includes('rodaemotor.com')){runRodaemotor();}
