@@ -18,7 +18,7 @@
  
   const CONFIG = {
     k: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key.txt",
-    r: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/mehedy.txt",
+    r: "https://raw.githubusercontent.com/freefireob49v2/shauryatripathi2009-cpu/main/mehedy.txt",
     t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button.txt",
     m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
     l: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/logo.png",
@@ -310,7 +310,7 @@ let hasUpdate = false;
 
 try {
   const updateRes = await fetch(
-    "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/version.txt?t=" + Date.now(),
+    "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/version.txt?t=" + Date.now(),
     { cache: "no-store" }
   );
 
