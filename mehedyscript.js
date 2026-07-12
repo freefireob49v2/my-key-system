@@ -18,7 +18,7 @@
  
   const CONFIG = {
     k: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key.txt",
-    r: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/mehedy.txt",
+    r: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/mehedy.txt",
     t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button.txt",
     m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
     l: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/logo.png",
@@ -149,7 +149,7 @@ object-fit:cover;
         box-shadow:0 4px 12px rgba(34,158,217,0.25);">TELEGRAM</button>
 
       <div id="mehedy-status" style="margin-top:16px;font-size:11px;font-weight:700;
-                                   color:#64748b;letter-spacing:1.5px;">Made with tg : @mehedy4644</div>
+                                   color:#64748b;letter-spacing:1.5px;">Telegram : @mehedy4644</div>
     `;
     document.body.appendChild(authBox);
 
@@ -317,7 +317,7 @@ let hasUpdate = false;
 
 try {
   const updateRes = await fetch(
-    "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/version.txt?t=" + Date.now(),
+    "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/version.txt?t=" + Date.now(),
     { cache: "no-store" }
   );
 
