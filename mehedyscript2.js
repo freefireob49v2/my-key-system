@@ -17,11 +17,11 @@
  
  
   const CONFIG = {
-    k: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/key2.txt",
-    r: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/mehedy.txt",
-    t: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/button2.txt",
-    m: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
-    l: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/logo2.png",
+    k: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/key.txt",
+    r: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/mehedy.txt",
+    t: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/button.txt",
+    m: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/music.mp3",
+    l: "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/logo.png",
     s: `position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
         background:rgba(6,10,23,0.95);backdrop-filter:blur(12px);
         -webkit-backdrop-filter:blur(12px);color:#fff;padding:30px 25px;
@@ -183,7 +183,7 @@ if (savedKey !== null) {
  
  
  
-    const FALLBACK_MUSIC_URL = "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3";
+    const FALLBACK_MUSIC_URL = "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/music.mp3";
     let musicLoading = false;
     musicBtn.addEventListener("click", async () => {
       if (musicLoading) return;
@@ -317,7 +317,7 @@ let hasUpdate = false;
 
 try {
   const updateRes = await fetch(
-    "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/version.txt?t=" + Date.now(),
+    "https://raw.githubusercontent.com/shauryatripathi2009-cpu/my-key-system/main/version.txt?t=" + Date.now(),
     { cache: "no-store" }
   );
 
