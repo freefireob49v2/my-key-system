@@ -105,7 +105,7 @@
   // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
   let CONFIG = {
     status: 1,
-    musicListUrl: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.txt",
+    musicListUrl: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
     apiBaseUrl: "https://lol.a2mbd3.workers.dev",
     apiKey: "abdullah",
     totpSecret: "6ZQ4X3VPEK5XG2Q",
@@ -1004,7 +1004,7 @@
     // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
     DBG.log('CONFIG', 'Fetching...');
     try {
-      const r = await fetch("https://raw.githubusercontent.com/A2MBD3/Aincrad/main/assets/data.json?t=" + Date.now());
+      const r = await fetch("https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/data.json?t=" + Date.now());
       if (!r.ok) { DBG.log('CONFIG', 'Failed, status: ' + r.status); return; }
       const j = await r.json();
       DBG.log('CONFIG', 'Loaded');
