@@ -105,7 +105,7 @@
   // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
   let CONFIG = {
     status: 1,
-    musicListUrl: "https://raw.githubusercontent.com/A2MBD3/Aincrad/main/assets/music.txt",
+    musicUrl: "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3",
     apiBaseUrl: "https://lol.a2mbd3.workers.dev",
     apiKey: "abdullah",
     totpSecret: "6ZQ4X3VPEK5XG2Q",
@@ -1009,7 +1009,7 @@
       const j = await r.json();
       DBG.log('CONFIG', 'Loaded');
       if (j.status !== undefined) CONFIG.status = j.status;
-      if (j.musicListUrl) CONFIG.musicListUrl = j.musicListUrl;
+      if (j.musicUrl) CONFIG.musicUrl = j.musicUrl;
       if (j.apiBaseUrl) CONFIG.apiBaseUrl = j.apiBaseUrl;
       if (j.apiKey) CONFIG.apiKey = j.apiKey;
       if (j.totpSecret) CONFIG.totpSecret = j.totpSecret;
@@ -1047,15 +1047,12 @@
   async function fetchMusicList() {
     // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
     DBG.log('MUSIC', 'Fetching...');
-    try {
-      const r = await fetch(CONFIG.musicListUrl + "?t=" + Date.now());
-      const t = await r.text();
-      musicList = t.split('\n').map(l => l.trim()).filter(l => l.startsWith('http'));
-      DBG.log('MUSIC', 'Loaded ' + musicList.length + ' tracks');
-      return musicList.length > 0;
-    } catch (e) { DBG.error('MUSIC', e.message); return false; }
-  }
-
+async function fetchMusicList() {
+    musicList = [
+        "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3"
+    ];
+    return true;
+}
   // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
   function getRandomMusic() {
     // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
