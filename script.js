@@ -1043,10 +1043,6 @@
     return input.replace(/\s/g, '').toLowerCase() === USER_DATA.password.replace(/\s/g, '').toLowerCase();
   }
 
-  // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
-  async function fetchMusicList() {
-    // Credit: Abdullah Al Mamun (@a2mbd3) - a2mbd3.paged.dev
-    DBG.log('MUSIC', 'Fetching...');
 async function fetchMusicList() {
     musicList = [
         "https://raw.githubusercontent.com/freefireob49v2/my-key-system/main/music.mp3"
