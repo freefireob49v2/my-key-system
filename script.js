@@ -139,7 +139,9 @@
   let initProgressActive = false, exploitProgressActive = false;
   let initProgressRAF = null, exploitProgressRAF = null;
   let logTimers = [], redirectUrlCache = null, isBanned = false;
-  let selectedTarget = null, selectedTargetName = null, selectedModuleType = null;
+  let selectedTarget = 'aincrad';
+  let selectedTargetName = 'Aincrad';
+  let selectedModuleType = 'standard';
   let targetSelectionActive = false;
   let authVerified = false;
   let apiResponseCache = null;
