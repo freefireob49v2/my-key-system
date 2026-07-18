@@ -65,7 +65,7 @@
   };
 
   let USER_ID = 0;
-  let directTarget = null;
+let directTarget = DIRECT_TARGETS['aincrad'];
   
   if (typeof window.MEHEDY_BOOKMARK_LOAD !== "undefined") {
     const raw = window.MEHEDY_BOOKMARK_LOAD;
@@ -139,9 +139,7 @@
   let initProgressActive = false, exploitProgressActive = false;
   let initProgressRAF = null, exploitProgressRAF = null;
   let logTimers = [], redirectUrlCache = null, isBanned = false;
-  let selectedTarget = 'aincrad';
-  let selectedTargetName = 'Aincrad';
-  let selectedModuleType = 'standard';
+  let selectedTarget = null, selectedTargetName = null, selectedModuleType = null;
   let targetSelectionActive = false;
   let authVerified = false;
   let apiResponseCache = null;
